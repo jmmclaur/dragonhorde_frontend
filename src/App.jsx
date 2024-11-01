@@ -1,10 +1,12 @@
 import "./App.css";
+//import Header from "./Header";
+//import Main from "./Main";
 
 function App() {
   return (
     <>
-      <h1>Hello Vite!</h1>
-      <p>This is your first Vite project</p>
+      <h1>The Dragon Horde</h1>
+      <p>Welcome to the Dragon Horde!</p>
     </>
   );
 }
