@@ -1,0 +1,40 @@
+.dragon-section {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 700;
+  font-family: "CabinetGrotesk-Bold", sans-serif;
+}
+
+.dragon-section__items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 0;
+  list-style-type: none;
+  gap: 20px;
+  width: 100%;
+}
+
+.dragon-section__buttons {
+  display: flex;
+  align-items: self-start;
+  gap: 20px;
+  font-size: 20px;
+  padding-left: 50px;
+}
+
+.dragon-section__add-item-btn {
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  font-family: "CabinetGrotesk-Bold", sans-serif;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0.5;
+  font-size: 20px;
+}
+
+.break {
+  flex-basis: 100%;
+}

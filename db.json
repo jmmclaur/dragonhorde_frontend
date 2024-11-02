@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "name": "Shorts",
+      "link": "https://th.bing.com/th/id/OIP.P_qySbAnz561i-eaoFdUTwHaHa?w=195&h=195&c=7&r=0&o=5&dpr=1.5&pid=1.7",
+      "weather": "hot",
+      "_id": 87
+    },
+    {
+      "name": "Shirt",
+      "link": "https://img.freepik.com/premium-photo/women-s-tshirts-hanger-white-background_176873-13806.jpg?w=2000",
+      "weather": "warm",
+      "_id": 88
+    },
+    {
+      "name": "Shoes",
+      "link": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1555967593-71XJQhLJ2L.jpg?crop=1xw:1xh;center,top",
+      "weather": "warm",
+      "_id": 89
+    },
+    {
+      "name": "Shorts",
+      "link": "https://th.bing.com/th/id/OIP.SDNd4d9-fmH4FSdI_XU0cgHaJ4?w=162&h=215&c=7&r=0&o=5&dpr=1.5&pid=1.7",
+      "weather": "warm",
+      "_id": 90
+    },
+    {
+      "name": "Jacket",
+      "link": "https://www.merchology.com/cdn/shop/products/EB501_black_1024x1024.jpg?v=1571267268",
+      "weather": "cold",
+      "_id": 91
+    },
+    {
+      "name": "Shirt",
+      "link": "https://th.bing.com/th/id/OIP.QVnOX2GSI7iY5fNPyCHdrwHaH8?w=183&h=197&c=7&r=0&o=5&dpr=1.5&pid=1.7",
+      "weather": "hot",
+      "_id": 92
+    }
+  ]
+}
