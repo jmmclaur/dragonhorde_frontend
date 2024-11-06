@@ -12,7 +12,7 @@ import React, { useState, useEffect, useContext } from "react";
 import FormModal from "../FormModal/FormModal";
 import { CurrentUserContext } from "../../utils/contexts/CurrentUserContext";
 
-const EditPofileModal = ({
+const ProfileEditModal = ({
   closeActiveModal,
   activeModal,
   handleProfileEdit,
@@ -80,4 +80,4 @@ const EditPofileModal = ({
   );
 };
 
-export default EditPofileModal;
+export default ProfileEditModal;

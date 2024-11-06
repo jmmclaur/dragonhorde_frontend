@@ -1,26 +1,28 @@
 // imports
-
-//functions
-
 // logo, API, toggleswitch
 // if a second page is needed, can create an 'About the Dragon Horde'
 
 //export default Header;
-
+import "./Header.css";
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo_weather.svg";
+import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import { useContext } from "react";
 import { CurrentUserContext } from "../../utils/contexts/CurrentUserContext";
-import ToggleSwitch from "../ToggleSwitch/ToggleSwitch"; // would be neat to toggle between offensive/defensive spells
+
+/*
+function Header({}) {
+  return <div>Header</div>;
+} */
 
 function Header({
-  handleAddClick,
   handleRegisterClick,
   handleLoginClick,
+  handleAddClick,
   isLoggedIn,
   weatherData,
-  dndData,
 }) {
-  const currentData = new Data().toLocaleString("default", {
+  const currentDate = new Date().toLocaleString("default", {
     month: "long",
     day: "numeric",
   });
@@ -28,12 +30,13 @@ function Header({
 
   return (
     <header className="header">
+      Header
       <Link to="/">
-        <img className="header__logo" src={logo} alt="header" />
+        <img src={logo} alt="dragon horde logo big" className="header__logo" />
       </Link>
       <p className="header__date-and-location">
         {" "}
-        {currentData} , {weatherData.city}
+        {currentDate} , {weatherData.city}
       </p>
       <ToggleSwitch />
       {isLoggedIn ? (
@@ -51,7 +54,7 @@ function Header({
               {currentUser?.avatar ? (
                 <img
                   src={currentUser?.avatar}
-                  alt="Majera Palae"
+                  alt="Terrence Tegegne"
                   className="header__avatar"
                 />
               ) : (
@@ -64,19 +67,41 @@ function Header({
         </>
       ) : (
         <div className="header__auth">
-          <button className="header__register" onClick={handleRegisterClick}>
-            Register
+          <button
+            className="header__registration"
+            onClick={handleRegisterClick}
+          >
+            Sign Up
           </button>
           <button className="header__login" onClick={handleLoginClick}>
             Login
           </button>
         </div>
       )}
+      ;
     </header>
   );
-
-  //logic for dnd spell data
-  // if certain temperature > certain species appears > suggest spells for offense/defense
 }
 
+/*
+function Header({ handleRegisterClick, handleLoginClick }) {
+  return (
+    <header className="header">
+      <Link to="/">
+        <img className="header__logo" src={logo} alt="header" />
+      </Link>
+      <Link className="header__link" to="/profile">
+        <p className="header__username">Hello</p>
+      </Link>
+      <div className="header__auth">
+        <button className="header_register" onClick={handleRegisterClick}>
+          Sign Up
+        </button>
+        <button className="header__login" onClick={handleLoginClick}>
+          Login
+        </button>
+      </div>
+    </header>
+  );
+} */
 export default Header;

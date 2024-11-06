@@ -19,10 +19,6 @@
   visibility: hidden;
 }
 
-/*.modal__close {
-    visibility: visible;
-  } */
-
 .modal__title {
   font-family: "CabinetGrotesk-Bold", sans-serif;
   margin: 0, 0, 24px, 0;

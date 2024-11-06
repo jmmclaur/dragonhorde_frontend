@@ -44,6 +44,3 @@ function FormModal({
 }
 
 export default FormModal;
-//try onClose instead of onClick
-
-//submit should work now, was missing onSubmit before. Let's give it a try

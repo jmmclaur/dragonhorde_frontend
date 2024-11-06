@@ -6,25 +6,30 @@
 
 // export default LoginModal;
 
+/*
+const LoginModal = ({ handleRegisterClick }) => {
+  return <FormModal onLinkClick={handleRegisterClick} />;
+}; */
+
 import React, { useState } from "react";
 import FormModal from "../FormModal/FormModal";
 
 const LoginModal = ({
-  activeModal,
   handleLogin,
   handleRegisterClick,
+  activeModal,
   onClose,
 }) => {
-  //set the email
   const [email, setEmail] = useState("");
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
-  //set the password
+
   const [password, setPassword] = useState("");
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     handleLogin(email, password);
@@ -32,14 +37,14 @@ const LoginModal = ({
 
   return (
     <FormModal
-      title="Log In"
-      buttonText="Log In"
+      title="Login"
+      buttonText="Login"
       isOpen={activeModal === "log-in"}
       onClose={onClose}
       onSubmit={handleSubmit}
       linkText="or Sign Up"
       onLinkClick={handleRegisterClick}
-      showLink={true}
+      showLing={true}
     >
       <label className="modal__label">
         Email*{" "}

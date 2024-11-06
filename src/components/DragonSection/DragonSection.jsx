@@ -4,6 +4,13 @@
 // itemcard break down
 // export default DragonSection;
 
+/*if the new stuff doesn't work revert to this
+function DragonSection({}) {
+  return <div>DragonSection</div>;
+}
+
+export default DragonSection; */
+
 import { CurrentUserContext } from "../../utils/contexts/CurrentUserContext";
 import React, { useContext } from "react";
 import ItemCard from "../ItemCard/ItemCard";
@@ -20,8 +27,9 @@ function DragonSection({
   const userItems = defaultDragons?.filter(
     (item) => item.owner === currentUser?._id
   );
+
   return (
-    <div className="dragon-section">
+    <div className="dron-section">
       <div className="dragon-section__buttons">
         <p>Your Items</p>
         <button

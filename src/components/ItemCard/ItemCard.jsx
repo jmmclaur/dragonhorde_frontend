@@ -13,7 +13,7 @@ import likeInactive from "../../assets/like-inactive.svg";
 import "./ItemCard.css";
 
 function ItemCard({ item, onCardLike, onCardClick }) {
-  const currentUser = useContext(CurrentUserContext); //wrapping currentUser in {} made the like button disappear?
+  const currentUser = useContext(CurrentUserContext);
 
   const isLiked = item.likes?.some((id) => id === currentUser?._id);
   const handleCardClick = () => {

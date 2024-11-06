@@ -4,11 +4,12 @@
   background-color: transparent;
 }
 
-.profile__dragon {
-  flex-direction: column;
+.profile__dragons {
   width: 100%;
+  font-size: 20px;
+  flex-direction: column;
   margin: 0;
   padding: 0;
-  gap: 20px;
   list-style-type: none;
+  gap: 21px;
 }

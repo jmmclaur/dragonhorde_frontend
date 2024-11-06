@@ -1,4 +1,4 @@
-export const defaultClothingItems = [
+export const defaultDragons = [
   {
     _id: 0,
     name: "Cap",
@@ -42,8 +42,6 @@ export const defaultClothingItems = [
       "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Coat.png?etag=298717ed89d5e40b1954a1831ae0bdd4",
   },
 ];
-
-//changed link to imageUrl
 
 export const apiKey = "5eae8c34762df345296377984b708784";
 

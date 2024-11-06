@@ -17,7 +17,7 @@ function Main({
   weatherData,
   handleCardClick,
   onCardLike,
-  updatedDefaultClothingItems,
+  updatedDefaultClothing,
 }) {
   const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
 
@@ -27,12 +27,12 @@ function Main({
       <section className="cards">
         <p className="cards__text">
           {currentTemperatureUnit === "F"
-            ? `${weatherData.temp.F}°F You may wish to wear:`
-            : `${weatherData.temp.C}°C You may wish to wear:`}
+            ? `${weatherData.temp.F}°F Beware! Possible Dragon Sightings:`
+            : `${weatherData.temp.C}°C Beware! Possible Dragon Sightings:`}
         </p>
 
         <ul className="cards__list">
-          {updatedDefaultClothingItems
+          {updatedDefaultClothing
             ?.filter((item) => {
               return item.weather === weatherData.type;
             })
@@ -52,5 +52,4 @@ function Main({
   );
 }
 
-//adding a key above the return made the default clothing items disappear, why though?
 export default Main;

@@ -1,5 +1,11 @@
+/*if new doesn't work, use this
+function WeatherCard({}) {
+  return <div>WeatherCard</div>;
+}
+
+export default WeatherCard; */
+
 import "./WeatherCard.css";
-import clear from "../../assets/day/clear_day.png";
 import { weatherOptions, defaultWeatherOptions } from "../../utils/constants";
 import { useContext } from "react";
 import { CurrentTemperatureUnitContext } from "../../utils/contexts/CurrentTemperatureUnitContext";
@@ -18,7 +24,6 @@ function WeatherCard({ weatherData }) {
       : defaultWeatherOptions.night.url);
 
   const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
-  // const temp = weatherData?.temp?.[currentTemperatureUnit] || 999;
 
   return (
     <section className="weather-card">
@@ -37,5 +42,3 @@ function WeatherCard({ weatherData }) {
 }
 
 export default WeatherCard;
-
-//imageUrl to link

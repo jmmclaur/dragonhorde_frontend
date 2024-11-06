@@ -1,4 +1,9 @@
-const baseUrl = "http://localhost:3001";
+//const baseUrl = "http://localhost:3001";
+
+const baseUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://api.wtwr.jmmclaur.jumpingcrab.com"
+    : "http://localhost:3001";
 
 function checkResponse(res) {
   if (res.ok) {
@@ -42,7 +47,7 @@ async function getItems() {
   return checkResponse(res);
 }
 
-async function addNewItem(name, imageUrl, weather, token) {
+async function addNewItem(name, imageUrl, weather, species, token) {
   //receive the 4 values
   return fetch(`${baseUrl}/items`, {
     method: "POST",
@@ -55,6 +60,7 @@ async function addNewItem(name, imageUrl, weather, token) {
       name,
       imageUrl,
       weather,
+      species,
     }),
   }).then(checkResponse); //ensure response is properly checked
 }

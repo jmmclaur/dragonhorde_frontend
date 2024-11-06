@@ -6,6 +6,13 @@
 
 import "./Footer.css";
 
+/*
+function Footer({}) {
+  return <div>Footer</div>;
+} */
+
+import "./Footer.css";
+
 function Footer() {
   return (
     <footer className="footer">

@@ -6,24 +6,33 @@
 
 // export default Profile
 
-import SideBar from "../SideBar/Sidebar";
-import DragonSection from "../DragonSection/DragonSection"; // double check how if it's case sensitive
+/*if new stuff doesn't work revert back to this
+function Profile({}) {
+  return <div>Profile</div>;
+}
+
+export default Profile; */
+
+import SideBar from "../SideBar/SideBar";
+import DragonSection from "../DragonSection/DragonSection";
 import "./Profile.css";
 
 const Profile = ({
   name,
   avatar,
+  handleCardClick,
   handleAddClick,
   handleEditClick,
-  handleCardClick,
   defaultDragons,
-  isLoggedIn,
-  setIsLoggedIn,
   handleLogOut,
+  setIsLoggedIn,
+  isLoggedIn,
   onCardLike,
 }) => {
+  console.log("Profile Props - Name: ", name);
+  console.log("Profile Props - Avatar: ", avatar);
   if (!name || !avatar) {
-    console.log("Missing props, name or avatar is undefined");
+    console.log("Missing props - Name or Avatar is undefined");
   }
 
   return (
@@ -35,10 +44,10 @@ const Profile = ({
           handleLogOut={handleLogOut}
         />
       </section>
-      <section className="profile__dragon">
+      <section className="profile__dragons">
         <DragonSection
-          handleAddClick={handleAddClick}
           handleCardClick={handleCardClick}
+          handleAddClick={handleAddClick}
           defaultDragons={defaultDragons}
           isLoggedIn={isLoggedIn}
           onCardLike={onCardLike}

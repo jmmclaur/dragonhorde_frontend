@@ -7,54 +7,14 @@
 }
 
 .header__logo {
-  margin-right: 24px;
-}
-
-.header__dragon-btn {
-  margin: 0;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 20px;
-}
-
-.header__user-container {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  line-height: 24px;
-  font-size: 20px;
-}
-
-.header__username {
-  margin: 0;
-}
-
-.header__date-and-location {
-  margin: 0;
-  line-height: 24px;
-  font-size: 20px;
-  margin-right: 550px;
-}
-
-.header__link {
-  display: flex;
-  text-decoration: none;
-  color: #000;
-  margin-left: 20px;
   flex-direction: row;
+  padding: 32px;
+  font-family: "CabinetGrotesk-Bold", sans-serif;
+  font-weight: 700;
 }
 
-.header__avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 0.5;
-  margin-left: 20px;
-  display: inline-flex;
-}
-
-.header__register {
+.header__registration {
   border-style: none;
   font-weight: 700;
   font-size: 20px;

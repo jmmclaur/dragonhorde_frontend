@@ -6,9 +6,9 @@
 
 // export default ItemModal;
 
-import { CurrentUserContext } from "../../utils/contexts/CurrentUserContext";
 import "./ItemModal.css";
 import { useContext } from "react";
+import { CurrentUserContext } from "../../utils/contexts/CurrentUserContext";
 
 function ItemModal({ activeModal, card, closeActiveModal, handleDeleteItem }) {
   const handleDeleteClick = () => {

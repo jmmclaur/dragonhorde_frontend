@@ -9,13 +9,8 @@
 import React, { useState } from "react";
 import FormModal from "../FormModal/FormModal";
 
-const RegisterModal = ({
-  closeActiveModal,
-  activeModal,
-  handleRegistration,
-  handleLoginClick,
-  onClose,
-}) => {
+const RegisterModal = ({ activeModal, handleRegisterclick, onClose }) => {
+  //definitions
   const [email, setEmail] = useState("");
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -26,31 +21,24 @@ const RegisterModal = ({
     setPassword(e.target.value);
   };
 
-  const [name, setName] = useState("");
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
-
   const [avatar, setAvatar] = useState("");
   const handleAvatarChange = (e) => {
     setAvatar(e.target.value);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    handleRegistration(email, password, name, avatar);
+  const [name, setName] = useState("");
+  const handleNameChange = (e) => {
+    setName(e.target.value);
   };
 
+  //form itself
   return (
     <FormModal
       title="Sign Up"
       buttonText="Sign Up"
       isOpen={activeModal === "sign-up"}
+      onLinkClick={handleRegisterclick}
       onClose={onClose}
-      onSubmit={handleSubmit}
-      showLink={true}
-      linkText="or Log In"
-      onLinkClick={handleLoginClick}
     >
       <label className="modal__label">
         Email*{" "}
@@ -78,6 +66,18 @@ const RegisterModal = ({
         />
       </label>
       <label className="modal__label">
+        Avatar URL{" "}
+        <input
+          type="url"
+          className="modal__input"
+          id="avatar"
+          placehold="Avatar URL"
+          required
+          value={avatar}
+          onChange={handleAvatarChange}
+        />
+      </label>
+      <label className="modal__label">
         Name{" "}
         <input
           type="text"
@@ -89,18 +89,6 @@ const RegisterModal = ({
           required
           value={name}
           onChange={handleNameChange}
-        />
-      </label>
-      <label className="modal__label">
-        Avatar URL{" "}
-        <input
-          type="url"
-          className="modal__input"
-          id="avatar"
-          placeholder="Avatar URL"
-          required
-          value={avatar}
-          onChange={handleAvatarChange}
         />
       </label>
     </FormModal>
