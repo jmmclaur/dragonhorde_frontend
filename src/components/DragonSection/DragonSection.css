@@ -15,7 +15,7 @@
   width: 100%;
 }
 
-.dragon-section__buttons {
+.dragons-section__buttons {
   display: flex;
   align-items: self-start;
   gap: 20px;

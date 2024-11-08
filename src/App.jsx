@@ -1,10 +1,10 @@
-//import "./App.css";
 import { useEffect, useState } from "react";
+import "./components/App/App.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Profile from "./components/Profile/Profile";
 import About from "./components/About/About";
-import WeatherCard from "./components/WeatherCard/WeatherCard";
+//import WeatherCard from "./components/WeatherCard/WeatherCard";
 import DragonSection from "./components/DragonSection/DragonSection";
 import RegisterModal from "./components/RegisterModal/RegisterModal";
 import LoginModal from "./components/LoginModal/LoginModal";
@@ -13,20 +13,21 @@ import ItemModal from "./components/ItemModal/ItemModal";
 import ProfileEditModal from "./components/ProfileEditModal/ProfileEditModal";
 import Main from "./components/Main/Main";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
-import { getItems, addNewItem, deleteItemById } from "./utils/Api";
+import { getItems, addNewItem, deleteItemById } from "./utils/api";
 import { CurrentUserContext } from "./utils/contexts/CurrentUserContext";
 import { setToken, getToken, removeToken } from "./utils/token";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { getWeather, filterWeatherData } from "./utils/weatherApi";
 import { CurrentTemperatureUnitContext } from "./utils/contexts/CurrentTemperatureUnitContext";
 import { coordinates, apiKey } from "./utils/constants";
-import * as api from "./utils/Api";
+import * as api from "./utils/api";
 import * as auth from "./utils/auth/auth";
+import React from "react";
 
 //structure
 function App() {
   const [activeModal, setActiveModal] = useState("");
-  const [defaultDragons, setDragons] = useState("");
+  const [defaultDragonItems, setDragonItems] = useState([]);
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
   const [selectedCard, setSelectedCard] = useState({});
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -56,8 +57,6 @@ function App() {
   const closeActiveModal = () => {
     setActiveModal("");
   };
-
-  //new fixing add item button
   const handleCardClick = (card) => {
     setSelectedCard(card);
     setActiveModal("preview");
@@ -86,13 +85,11 @@ function App() {
   const handleEditClick = () => {
     setActiveModal("edit-profile");
   };
-
   const handleToggleSwitchChange = () => {
     currentTemperatureUnit === "F"
       ? setCurrentTemperatureUnit("C")
       : setCurrentTemperatureUnit("F");
   };
-  /////
 
   //useEffect
   useEffect(() => {
@@ -119,7 +116,7 @@ function App() {
   useEffect(() => {
     getItems()
       .then(({ data }) => {
-        setDragons(data);
+        setDragonItems(data);
       })
       .catch(console.error);
   }, []);
@@ -127,28 +124,10 @@ function App() {
   useEffect(() => {
     getItems()
       .then((data) => {
-        setDragons(data);
+        setDragonItems(data);
       })
       .catch(console.error);
   }, []);
-
-  useEffect(() => {
-    console.log("CurrentUser State: ", currentUser);
-  }, [currentUser]);
-
-  useEffect(() => {
-    const jwt = getToken();
-    if (!jwt) {
-      return;
-    }
-    api
-      .getUserInfo(jwt)
-      .then((res) => {
-        setIsLoggedIn(true);
-        setCurrentUser(res);
-      })
-      .catch(console.error);
-  }, [isLoggedIn]);
 
   useEffect(() => {
     getWeather(coordinates, apiKey)
@@ -202,11 +181,29 @@ function App() {
       .catch(console.error);
   };
 
+  useEffect(() => {
+    console.log("CurrentUser State: ", currentUser);
+  }, [currentUser]);
+
+  useEffect(() => {
+    const jwt = getToken();
+    if (!jwt) {
+      return;
+    }
+    api
+      .getUserInfo(jwt)
+      .then((res) => {
+        setIsLoggedIn(true);
+        setCurrentUser(res);
+      })
+      .catch(console.error);
+  }, [isLoggedIn]);
+
   const onAddNewItem = async ({ name, imageUrl, weather, species }) => {
     const jwt = getToken();
     return addNewItem(name, imageUrl, weather, species, jwt)
       .then((item) => {
-        setDragons([item.data, ...defaultDragons]);
+        setDragonItems([item.data, ...defaultDragonItems]);
         closeActiveModal();
       })
       .catch((err) => {
@@ -219,10 +216,10 @@ function App() {
     const jwt = getToken();
     try {
       await deleteItemById(id, jwt);
-      const updatedDefaultDragons = defaultDragons.filter(
+      const updatedDefaultDragonItems = defaultDragons.filter(
         (item) => item._id !== id
       );
-      setDragons(updatedDefaultDragons);
+      setDragonItems(updatedDefaultDragonItems);
       closeActiveModal();
     } catch (err) {
       console.error("Error deleting item", err);
@@ -236,10 +233,10 @@ function App() {
       ? api
           .addCardLike(id, jwt)
           .then((updatedCard) => {
-            const updatedDefaultDragons = defaultDragons?.map((item) =>
+            const updatedDefaultDragonItems = defaultDragonItems?.map((item) =>
               item._id === id ? updatedCard.data : item
             );
-            setDragons(updatedDefaultDragons);
+            setDragonItems(updatedDefaultDragonItems);
           })
           .catch((error) => {
             console.error(error);
@@ -247,10 +244,10 @@ function App() {
       : api
           .removeCardLike(id, jwt)
           .then((updatedCard) => {
-            const updatedDefaultDragons = defaultDragons.map((item) =>
+            const updatedDefaultDragonItems = defaultDragonItems.map((item) =>
               item._id === id ? updatedCard.data : item
             );
-            setDragons(updatedDefaultDragons);
+            setDragonItems(updatedDefaultDragonItems);
           })
           .catch((error) => {
             console.error(error);
@@ -280,7 +277,7 @@ function App() {
                   path="/"
                   element={
                     <Main
-                      updatedDefaultDragons={defaultDragons}
+                      updatedDefaultDragonItems={defaultDragonItems}
                       handleAddClick={handleAddClick}
                       handleCardClick={handleCardClick}
                       isLoggedIn={isLoggedIn}
@@ -297,7 +294,7 @@ function App() {
                           handleAddClick={handleAddClick}
                           handleCardClick={handleCardClick}
                           handleEditClick={handleEditClick}
-                          updatedDefaultDragons={defaultDragons}
+                          updatedDefaultDragons={defaultDragonItems}
                           isLoggedIn={isLoggedIn}
                           name={currentUser.name}
                           avatar={currentUser.avatar}

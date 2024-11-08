@@ -1,9 +1,10 @@
-//const baseUrl = "http://localhost:3001";
+const baseUrl = "http://localhost:3001";
 
+/*
 const baseUrl =
   process.env.NODE_ENV === "production"
     ? "https://api.wtwr.jmmclaur.jumpingcrab.com"
-    : "http://localhost:3001";
+    : "http://localhost:3001"; */
 
 function checkResponse(res) {
   if (res.ok) {
@@ -38,23 +39,27 @@ const updateUserInfo = async (name, avatar, token) => {
 };
 
 async function getItems() {
-  const res = await fetch(`${baseUrl}/items`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-  return checkResponse(res);
+  try {
+    const res = await fetch(`${baseUrl}/dragons`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    return checkResponse(res);
+  } catch (error) {
+    console.error("Fetch error:", error);
+    throw error;
+  }
 }
 
 async function addNewItem(name, imageUrl, weather, species, token) {
-  //receive the 4 values
-  return fetch(`${baseUrl}/items`, {
+  return fetch(`${baseUrl}/dragons`, {
     method: "POST",
     headers: {
       Accept: "application/json",
       "Content-type": "application/json",
-      Authorization: `Bearer ${token}`, //use token for authorization
+      Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({
       name,
@@ -62,11 +67,11 @@ async function addNewItem(name, imageUrl, weather, species, token) {
       weather,
       species,
     }),
-  }).then(checkResponse); //ensure response is properly checked
+  }).then(checkResponse);
 }
 
 async function deleteItemById(id, token) {
-  const res = await fetch(`${baseUrl}/items/${id}`, {
+  const res = await fetch(`${baseUrl}/dragons/${id}`, {
     method: "DELETE",
     headers: {
       Accept: "application/json",
@@ -78,7 +83,7 @@ async function deleteItemById(id, token) {
 }
 
 async function addCardLike(_id, token) {
-  const res = await fetch(`${baseUrl}/items/${_id}/likes`, {
+  const res = await fetch(`${baseUrl}/dragons/${_id}/likes`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
@@ -90,7 +95,7 @@ async function addCardLike(_id, token) {
 }
 
 async function removeCardLike(_id, token) {
-  const res = await fetch(`${baseUrl}/items/${_id}/likes`, {
+  const res = await fetch(`${baseUrl}/dragons/${_id}/likes`, {
     method: "DELETE",
     headers: {
       Accept: "application/json",

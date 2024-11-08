@@ -17,7 +17,7 @@ function Main({
   weatherData,
   handleCardClick,
   onCardLike,
-  updatedDefaultClothing,
+  updatedDefaultDragonItems,
 }) {
   const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
 
@@ -27,12 +27,12 @@ function Main({
       <section className="cards">
         <p className="cards__text">
           {currentTemperatureUnit === "F"
-            ? `${weatherData.temp.F}°F Beware! Possible Dragon Sightings:`
-            : `${weatherData.temp.C}°C Beware! Possible Dragon Sightings:`}
+            ? `${weatherData.temp.F}°F Beware! Possible Dragon Sightings`
+            : `${weatherData.temp.C}°C Beware! Possible Dragon Sightings`}
         </p>
 
         <ul className="cards__list">
-          {updatedDefaultClothing
+          {updatedDefaultDragonItems
             ?.filter((item) => {
               return item.weather === weatherData.type;
             })

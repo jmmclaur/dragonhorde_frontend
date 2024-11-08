@@ -19,17 +19,17 @@ import "./DragonSection.css";
 function DragonSection({
   handleCardClick,
   handleAddClick,
-  defaultDragons,
+  defaultDragonItems,
   isLoggedIn,
   onCardLike,
 }) {
   const currentUser = useContext(CurrentUserContext);
-  const userItems = defaultDragons?.filter(
+  const userItems = defaultDragonItems?.filter(
     (item) => item.owner === currentUser?._id
   );
 
   return (
-    <div className="dron-section">
+    <div className="dragon-section">
       <div className="dragon-section__buttons">
         <p>Your Items</p>
         <button

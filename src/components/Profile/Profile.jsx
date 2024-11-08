@@ -23,7 +23,7 @@ const Profile = ({
   handleCardClick,
   handleAddClick,
   handleEditClick,
-  defaultDragons,
+  defaultDragonItems,
   handleLogOut,
   setIsLoggedIn,
   isLoggedIn,
@@ -48,7 +48,7 @@ const Profile = ({
         <DragonSection
           handleCardClick={handleCardClick}
           handleAddClick={handleAddClick}
-          defaultDragons={defaultDragons}
+          defaultDragonItems={defaultDragonItems}
           isLoggedIn={isLoggedIn}
           onCardLike={onCardLike}
         />

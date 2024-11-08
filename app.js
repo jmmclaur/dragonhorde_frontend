@@ -15,7 +15,7 @@ mongoose.connect("mongodb://localhost:27017/mynewdb", {
   useFindAndModify: false,
 });
 
-app.use("/films", require("./routes/films"));
+app.use("/dragons", require("./routes/dragons"));
 
 app.use(express.static(path.join(__dirname, "public")));
 app.listen(PORT, () => {
