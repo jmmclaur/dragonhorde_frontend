@@ -30,7 +30,6 @@ function Header({
 
   return (
     <header className="header">
-      Header
       <Link to="/">
         <img src={logo} alt="dragon horde logo big" className="header__logo" />
       </Link>

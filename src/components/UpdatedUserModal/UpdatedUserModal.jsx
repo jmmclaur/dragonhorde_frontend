@@ -9,11 +9,10 @@
 // export default UpdatedUserModal;
 
 import FormModal from "./FormModal";
-//import { useFormAndValidation } from "../utils/useFormAndValidation";
 import { useContext, useEffect } from "react";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
-function UpdateUserModal({ isOpen, handleUpdateUser, isLoading }) {
+function UpdatedUserModal({ isOpen, handleUpdatedUser, isLoading }) {
   const { userData } = useContext(CurrentUserContext);
   const { values, handleChange, errors, isValid, resetForm, setValues } =
     useFormAndValidation();
@@ -23,7 +22,7 @@ function UpdateUserModal({ isOpen, handleUpdateUser, isLoading }) {
   }, [isOpen, setValues, userData]);
 
   const handleSubmit = () => {
-    handleUpdateUser(values, resetCurrentForm);
+    handleUpdatedUser(values, resetCurrentForm);
   };
 
   const resetCurrentForm = () => {
@@ -85,4 +84,4 @@ function UpdateUserModal({ isOpen, handleUpdateUser, isLoading }) {
   );
 }
 
-export default UpdateUserModal;
+export default UpdatedUserModal;

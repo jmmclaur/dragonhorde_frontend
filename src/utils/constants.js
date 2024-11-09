@@ -3,61 +3,81 @@ export const defaultDragonItems = [
     _id: 0,
     name: "Black",
     weather: "hot",
-    imageUrl: "",
+    species: "chromatic",
+    imageUrl:
+      "https://i.pinimg.com/originals/88/56/e5/8856e5f2a83209a359a983a25f471117.png",
   },
   {
     _id: 1,
     name: "Red",
     weather: "hot",
-    imageUrl: "",
+    species: "chromatic",
+    imageUrl:
+      "https://th.bing.com/th/id/OIP.sZv1ZHWJP-jMjCo9oQV9OgHaFm?w=265&h=200&c=7&r=0&o=5&dpr=1.5&pid=1.7",
   },
   {
     _id: 2,
     name: "Green",
     weather: "warm",
-    imageUrl: "",
+    species: "chromatic",
+    imageUrl:
+      "https://th.bing.com/th/id/OIP.Kna-NU7buePxbTOtecTZVQHaJW?w=155&h=195&c=7&r=0&o=5&dpr=1.5&pid=1.7",
   },
   {
     _id: 3,
     name: "Blue",
     weather: "cold",
-    imageUrl: "",
+    species: "chromatic",
+    imageUrl:
+      "https://th.bing.com/th/id/OIP.JsN9VXP4spAim_NIzwGvagHaE6?w=292&h=194&c=7&r=0&o=5&dpr=1.5&pid=1.7",
   },
   {
     _id: 4,
     name: "White",
     weather: "cold",
-    imageUrl: "",
+    species: "chromatic",
+    imageUrl:
+      "https://th.bing.com/th/id/OIP.WsdxO1vCsOTsyq5Ntqug1gHaFc?w=239&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7",
   },
   {
     _id: 5,
     name: "Gold",
     weather: "hot",
-    imageUrl: "",
+    species: "metallic",
+    imageUrl:
+      "https://th.bing.com/th/id/OIP.-uaZck606ZaxOLWscftuvgHaJl?w=137&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7",
   },
   {
     _id: 5,
     name: "Bronze",
     weather: "hot",
-    imageUrl: "",
+    species: "metallic",
+    imageUrl:
+      "https://th.bing.com/th/id/OIP.ibLIn28_ql5i0GoGCRtIXQHaKS?w=158&h=219&c=7&r=0&o=5&dpr=1.5&pid=1.7",
   },
   {
     _id: 5,
     name: "Copper",
     weather: "warm",
-    imageUrl: "",
+    species: "metallic",
+    imageUrl:
+      "https://th.bing.com/th/id/OIP.0ObfrmntMTeIqbHXM0uHpAHaKT?w=136&h=190&c=7&r=0&o=5&dpr=1.5&pid=1.7",
   },
   {
     _id: 5,
     name: "Brass",
     weather: "warm",
-    imageUrl: "",
+    species: "metallic",
+    imageUrl:
+      "https://th.bing.com/th/id/OIP.pxrC1zZkNj4NEKezIuDZ4AAAAA?w=236&h=199&c=7&r=0&o=5&dpr=1.5&pid=1.7",
   },
   {
     _id: 5,
     name: "Silver",
     weather: "cold",
-    imageUrl: "",
+    species: "metallic",
+    imageUrl:
+      "https://th.bing.com/th/id/OIP.aYXk2MICiY85U1bR4Ehx2QDWEs?w=139&h=195&c=7&r=0&o=5&dpr=1.5&pid=1.7",
   },
 ];
 

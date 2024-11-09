@@ -1,5 +1,5 @@
 import { processServerResponse } from "./processServer";
-import { checkResponse } from "./Api";
+import { checkResponse } from "./api";
 
 export const getWeather = ({ latitude, longitude }, APIKey) => {
   return fetch(
