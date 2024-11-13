@@ -9,7 +9,12 @@
 import React, { useState } from "react";
 import FormModal from "../FormModal/FormModal";
 
-const RegisterModal = ({ activeModal, handleRegisterclick, onClose }) => {
+const RegisterModal = ({
+  activeModal,
+  handleLoginClick,
+  handleRegistration,
+  onClose,
+}) => {
   //definitions
   const [email, setEmail] = useState("");
   const handleEmailChange = (e) => {
@@ -31,14 +36,20 @@ const RegisterModal = ({ activeModal, handleRegisterclick, onClose }) => {
     setName(e.target.value);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleRegistration(email, password, name, avatar);
+  };
+
   //form itself
   return (
     <FormModal
       title="Sign Up"
       buttonText="Sign Up"
       isOpen={activeModal === "sign-up"}
-      onLinkClick={handleRegisterclick}
+      onLinkClick={handleLoginClick}
       onClose={onClose}
+      onSubmit={handleSubmit}
     >
       <label className="modal__label">
         Email*{" "}

@@ -12,7 +12,7 @@ import FormModal from "./FormModal";
 import { useContext, useEffect } from "react";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
-function UpdatedUserModal({ isOpen, handleUpdatedUser, isLoading }) {
+function UpdateUserModal({ isOpen, handleUpdateUser, isLoading }) {
   const { userData } = useContext(CurrentUserContext);
   const { values, handleChange, errors, isValid, resetForm, setValues } =
     useFormAndValidation();
@@ -22,7 +22,7 @@ function UpdatedUserModal({ isOpen, handleUpdatedUser, isLoading }) {
   }, [isOpen, setValues, userData]);
 
   const handleSubmit = () => {
-    handleUpdatedUser(values, resetCurrentForm);
+    handleUpdateUser(values, resetCurrentForm);
   };
 
   const resetCurrentForm = () => {
@@ -84,4 +84,4 @@ function UpdatedUserModal({ isOpen, handleUpdatedUser, isLoading }) {
   );
 }
 
-export default UpdatedUserModal;
+export default UpdateUserModal;

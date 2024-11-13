@@ -15,6 +15,7 @@ import { CurrentUserContext } from "../../utils/contexts/CurrentUserContext";
 import React, { useContext } from "react";
 import ItemCard from "../ItemCard/ItemCard";
 import "./DragonSection.css";
+//import { getWeatherType } from "../../utils/auth/weatherApi";
 
 function DragonSection({
   handleCardClick,
@@ -59,3 +60,32 @@ function DragonSection({
   );
 }
 export default DragonSection;
+
+//if/then can't be used in jsx only expressions
+/*
+var chartGraphContent =
+        <div className={"chartContent"}>
+            {this.state.modalityGraph['nca'] > 0 ?
+                <div className={"chart-container"}>
+                    <Chart
+                        chartType="ColumnChart"
+                        data = { this.state.modalityGraph?this.state.modalityGraph.chartData['units']:emptyDataRows }
+                        options={chartOptions}
+                        graph_id="modalitiesChart"
+                        width="100%"
+                        height="250px"
+                    /> 
+                </div>
+                : "<span>Else Block</span>"
+            }
+        </div>;
+*/
+
+/*const getSpeciesType = (temperature) => {
+  if ((temperature = "hot")) {
+    return { black: "black", red: "red", gold: "gold", bronze: "bronze" };
+  } else if ((temperature = "warm")) {
+    return { green: "green", copper: "copper", brass: "brass" };
+  } else temperature = "cold";
+  return { blue: "blue", white: "white", silver: "silver" };
+};*/

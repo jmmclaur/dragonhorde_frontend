@@ -73,7 +73,7 @@ function App() {
       return;
     }
     api
-      .updatedUserInfo(name, avatar, jwt)
+      .updateUserInfo(name, avatar, jwt)
       .then((data) => {
         setCurrentUser(data);
         closeActiveModal();
@@ -112,16 +112,6 @@ function App() {
     };
   }, [activeModal]);
 
-  //new fixing add item button
-  /*
-  useEffect(() => {
-    getItems()
-      .then(({ data }) => {
-        setDragonItems(data);
-      })
-      .catch(console.error);
-  }, []); */
-
   useEffect(() => {
     getItems()
       .then((data) => {
@@ -139,7 +129,6 @@ function App() {
       })
       .catch(console.error);
   }, []);
-  /////
 
   //forms
   const handleRegistration = (email, password, name, avatar) => {
@@ -162,6 +151,7 @@ function App() {
     auth
       .authorize(email, password)
       .then((data) => {
+        console.log("Login API Response: ", data);
         setToken(data.token);
         setIsLoggedIn(true);
         localStorage.setItem("jwt", data.token);
@@ -189,6 +179,10 @@ function App() {
 
   useEffect(() => {
     const jwt = getToken();
+    console.log("jwt");
+    //system is trying to login before you attempt to login
+    //look at your currentuser
+    //logging jwt token, login, current user, user
     if (!jwt) {
       return;
     }
@@ -218,10 +212,10 @@ function App() {
     const jwt = getToken();
     try {
       await deleteItemById(id, jwt);
-      const updatedDefaultDragonItems = defaultDragons.filter(
+      const updateDefaultDragonItems = defaultDragons.filter(
         (item) => item._id !== id
       );
-      setDragonItems(updatedDefaultDragonItems);
+      setDragonItems(updateDefaultDragonItems);
       closeActiveModal();
     } catch (err) {
       console.error("Error deleting item", err);
@@ -234,22 +228,22 @@ function App() {
     !isLiked
       ? api
           .addCardLike(id, jwt)
-          .then((updatedCard) => {
-            const updatedDefaultDragonItems = defaultDragonItems?.map((item) =>
-              item._id === id ? updatedCard.data : item
+          .then((updateCard) => {
+            const updateDefaultDragonItems = defaultDragonItems?.map((item) =>
+              item._id === id ? updateCard.data : item
             );
-            setDragonItems(updatedDefaultDragonItems);
+            setDragonItems(updateDefaultDragonItems);
           })
           .catch((error) => {
             console.error(error);
           })
       : api
           .removeCardLike(id, jwt)
-          .then((updatedCard) => {
-            const updatedDefaultDragonItems = defaultDragonItems.map((item) =>
-              item._id === id ? updatedCard.data : item
+          .then((updateCard) => {
+            const updateDefaultDragonItems = defaultDragonItems.map((item) =>
+              item._id === id ? updateCard.data : item
             );
-            setDragonItems(updatedDefaultDragonItems);
+            setDragonItems(updateDefaultDragonItems);
           })
           .catch((error) => {
             console.error(error);
@@ -278,7 +272,7 @@ function App() {
                 path="/"
                 element={
                   <Main
-                    updatedDefaultDragonItems={defaultDragonItems}
+                    updateDefaultDragonItems={defaultDragonItems}
                     handleAddClick={handleAddClick}
                     handleCardClick={handleCardClick}
                     isLoggedIn={isLoggedIn}
@@ -296,12 +290,12 @@ function App() {
                         handleCardClick={handleCardClick}
                         handleEditClick={handleEditClick}
                         defaultDragons={defaultDragonItems}
+                        handleLogOut={handleLogOut}
                         isLoggedIn={isLoggedIn}
+                        setIsLoggedIn={setIsLoggedIn}
                         name={currentUser.name}
                         avatar={currentUser.avatar}
                         onCardLike={handleCardLike}
-                        setIsLoggedIn={setIsLoggedIn}
-                        handleLogOut={handleLogOut}
                       />
                     ) : (
                       <div>Loading...</div>

@@ -9,7 +9,7 @@ function checkResponse(res) {
 }
 
 const getUserInfo = (token) => {
-  return fetch(`${baseUrl}/user`, {
+  return fetch(`${baseUrl}/users/me`, {
     method: "GET",
     headers: {
       Accept: "application/json",
@@ -18,9 +18,10 @@ const getUserInfo = (token) => {
     },
   }).then(checkResponse);
 };
+//something might be wrong w how the tokens are being retrieved, 401 error for incorrect email/password 11.11.24
 
-const updatedUserInfo = async (name, avatar, token) => {
-  const res = await fetch(`${baseUrl}/user`, {
+const updateUserInfo = async (name, avatar, token) => {
+  const res = await fetch(`${baseUrl}/users/me`, {
     method: "PATCH",
     headers: {
       Accept: "application/json",
@@ -107,7 +108,7 @@ export {
   addNewItem,
   deleteItemById,
   getUserInfo,
-  updatedUserInfo,
+  updateUserInfo,
   addCardLike,
   removeCardLike,
 };
