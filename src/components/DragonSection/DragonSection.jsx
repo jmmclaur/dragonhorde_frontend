@@ -81,6 +81,14 @@ var chartGraphContent =
         </div>;
 */
 
+//giving it a try
+/*var speciesContent =
+<div className={"chartContent"}>
+{this.state.modalityGraph[]} == hot ? 
+<div className={"dragon-container"}>
+<Chart
+chartType="ColumnChart"
+
 /*const getSpeciesType = (temperature) => {
   if ((temperature = "hot")) {
     return { black: "black", red: "red", gold: "gold", bronze: "bronze" };

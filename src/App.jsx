@@ -114,7 +114,7 @@ function App() {
 
   useEffect(() => {
     getItems()
-      .then((data) => {
+      .then(({ data }) => {
         setDragonItems(data);
       })
       .catch(console.error);
@@ -179,10 +179,6 @@ function App() {
 
   useEffect(() => {
     const jwt = getToken();
-    console.log("jwt");
-    //system is trying to login before you attempt to login
-    //look at your currentuser
-    //logging jwt token, login, current user, user
     if (!jwt) {
       return;
     }
@@ -196,10 +192,13 @@ function App() {
   }, [isLoggedIn]);
 
   const onAddNewItem = async ({ name, imageUrl, weather, species }) => {
+    console.log(name, imageUrl, weather, species);
     const jwt = getToken();
+    console.log(jwt);
     return addNewItem(name, imageUrl, weather, species, jwt)
       .then((item) => {
         setDragonItems([item.data, ...defaultDragonItems]);
+        console.log("hi");
         closeActiveModal();
       })
       .catch((err) => {
@@ -212,7 +211,7 @@ function App() {
     const jwt = getToken();
     try {
       await deleteItemById(id, jwt);
-      const updateDefaultDragonItems = defaultDragons.filter(
+      const updateDefaultDragonItems = defaultDragonItems.filter(
         (item) => item._id !== id
       );
       setDragonItems(updateDefaultDragonItems);
