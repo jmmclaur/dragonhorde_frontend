@@ -9,9 +9,21 @@
 .header__logo {
   display: flex;
   flex-direction: row;
-  padding: 32px;
+  padding: 20px;
   font-family: "CabinetGrotesk-Bold", sans-serif;
   font-weight: 700;
+  width: 150px;
+  height: 150px;
+}
+
+.header__icon {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  font-family: "CabinetGrotesk-Bold", sans-serif;
+  font-weight: 700;
+  width: 150px;
+  height: 150px;
 }
 
 .header__registration {

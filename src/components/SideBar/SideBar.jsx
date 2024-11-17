@@ -1,11 +1,3 @@
-// import current user context, use context, css
-
-// function
-
-// form itself
-
-// export default SideBar;
-
 import "./SideBar.css";
 import { CurrentUserContext } from "../../utils/contexts/CurrentUserContext";
 import { useContext } from "react";

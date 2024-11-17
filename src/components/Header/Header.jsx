@@ -5,7 +5,10 @@
 //export default Header;
 import "./Header.css";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo_weather.svg";
+import logo from "../../assets/dragonhorde_logo.png";
+import logo1 from "../../assets/dragonhorde_logo1.png";
+import logo2 from "../../assets/dragonhorde_logo2.png";
+import logo3 from "../../assets/dragonhorde_logo3.png";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import { useContext } from "react";
 import { CurrentUserContext } from "../../utils/contexts/CurrentUserContext";

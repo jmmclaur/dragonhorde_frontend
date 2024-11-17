@@ -114,7 +114,7 @@ function App() {
 
   useEffect(() => {
     getItems()
-      .then(({ data }) => {
+      .then((data) => {
         setDragonItems(data);
       })
       .catch(console.error);
@@ -123,7 +123,6 @@ function App() {
   useEffect(() => {
     getWeather(coordinates, apiKey)
       .then((data) => {
-        console.log("weather");
         const filteredData = filterWeatherData(data);
         setWeatherData(filteredData);
       })
