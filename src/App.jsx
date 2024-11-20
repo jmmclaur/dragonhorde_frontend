@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import "./components/App/App.css";
 import Header from "./components/Header/Header";
+import Parallax from "./components/Mountains/Mountains";
 import Footer from "./components/Footer/Footer";
 import Profile from "./components/Profile/Profile";
 import About from "./components/About/About";
-//import WeatherCard from "./components/WeatherCard/WeatherCard";
 import DragonSection from "./components/DragonSection/DragonSection";
 import RegisterModal from "./components/RegisterModal/RegisterModal";
 import LoginModal from "./components/LoginModal/LoginModal";
@@ -90,6 +90,11 @@ function App() {
       ? setCurrentTemperatureUnit("C")
       : setCurrentTemperatureUnit("F");
   };
+
+  /*
+  const handleScroll = () => {
+    setActiveModal("scroll");
+  }; */
 
   //useEffect
   useEffect(() => {
@@ -197,6 +202,10 @@ function App() {
     return addNewItem(name, imageUrl, weather, species, jwt)
       .then((item) => {
         setDragonItems([item.data, ...defaultDragonItems]);
+        /*{Array.isArray(defaultDragonItems) && defaultDragonItems.map((item) => (
+          // Render item components here
+
+        ))}; */
         console.log("hi");
         closeActiveModal();
       })
@@ -204,6 +213,31 @@ function App() {
         console.error(err);
       });
   };
+
+  /*
+  const addNewItem = {
+    name: "Blah",
+    dragon: {
+      name: "",
+      imageUrl: "",
+      weather: "",
+      species: "",
+    },
+  };
+
+  const dragonName = addNewItem.dragon?.name; */
+  /*
+  const adventurer = {
+    name: "Alice",
+    cat: {
+      name: "Dinah",
+    },
+  };
+
+  const dogName = adventurer.dog?.name;
+  console.log(dogName);
+  console.log(adventurer.someNonExistentMethod?.());
+  */
 
   //new fixing add item button
   const handleDelete = async (id) => {
@@ -223,6 +257,7 @@ function App() {
   const handleCardLike = ({ _id, isLiked }) => {
     const id = _id;
     const jwt = getToken();
+
     !isLiked
       ? api
           .addCardLike(id, jwt)
@@ -230,6 +265,7 @@ function App() {
             const updateDefaultDragonItems = defaultDragonItems?.map((item) =>
               item._id === id ? updateCard.data : item
             );
+            console.log(updateDefaultDragonItems);
             setDragonItems(updateDefaultDragonItems);
           })
           .catch((error) => {
@@ -258,6 +294,7 @@ function App() {
           value={{ currentTemperatureUnit, handleToggleSwitchChange }}
         >
           <div className="page__content">
+            <Parallax />
             <Header
               handleRegisterClick={handleRegisterClick}
               handleLoginClick={handleLoginClick}
@@ -275,6 +312,7 @@ function App() {
                     handleCardClick={handleCardClick}
                     isLoggedIn={isLoggedIn}
                     weatherData={weatherData}
+                    onCardLike={handleCardLike}
                   />
                 }
               />
@@ -287,7 +325,7 @@ function App() {
                         handleAddClick={handleAddClick}
                         handleCardClick={handleCardClick}
                         handleEditClick={handleEditClick}
-                        defaultDragons={defaultDragonItems}
+                        defaultDragonItems={defaultDragonItems}
                         handleLogOut={handleLogOut}
                         isLoggedIn={isLoggedIn}
                         setIsLoggedIn={setIsLoggedIn}
@@ -302,8 +340,6 @@ function App() {
                 }
               />
             </Routes>
-            <h1>The Dragon Horde</h1>
-            <p>Welcome to the Dragon Horde!</p>
             <About />
           </div>
           <div className="page__content">

@@ -1,0 +1,14 @@
+.about__title {
+  display: flex;
+  align-items: center;
+  padding-left: 200px;
+}
+
+.about__cards {
+  display: flex;
+  flex-direction: row;
+}
+
+.about__dragon {
+  z-index: -1;
+}

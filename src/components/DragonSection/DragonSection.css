@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   font-weight: 700;
   font-family: "CabinetGrotesk-Bold", sans-serif;
+  gap: 25px;
 }
 
 .dragon-section__items {

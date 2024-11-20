@@ -15,7 +15,8 @@ mongoose.connect("mongodb://localhost:27017/mynewdb", {
   useFindAndModify: false,
 });
 
-app.use("/items", require("./routes/items"));
+app.use("/dragonItem", require("./routes/dragonItems"));
+//originally had it as item and items
 
 app.use(express.static(path.join(__dirname, "public")));
 app.listen(PORT, () => {

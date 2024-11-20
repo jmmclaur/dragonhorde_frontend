@@ -1,3 +1,5 @@
+import sleepingDragon from "../../assets/sleeping_dragon.png";
+
 function About({}) {
   return (
     <div>
@@ -13,8 +15,12 @@ function About({}) {
               weather sightings and possible spells to protect oneself during an
               altercation.
             </p>
-            <img src="" alt="dragon horde logo big" className="header__icon" />
           </li>
+          <img
+            src={sleepingDragon}
+            alt="dragon horde logo big"
+            className="about__dragon"
+          />
         </ul>
       </section>
     </div>

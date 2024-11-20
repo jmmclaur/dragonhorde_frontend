@@ -18,7 +18,6 @@ const getUserInfo = (token) => {
     },
   }).then(checkResponse);
 };
-//something might be wrong w how the tokens are being retrieved, 401 error for incorrect email/password 11.11.24
 
 const updateUserInfo = async (name, avatar, token) => {
   const res = await fetch(`${baseUrl}/users/me`, {
@@ -32,22 +31,6 @@ const updateUserInfo = async (name, avatar, token) => {
   });
   return checkResponse(res);
 };
-
-async function getItems() {
-  try {
-    console.log("get items");
-    const res = await fetch(`${baseUrl}/items`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    return checkResponse(res);
-  } catch (error) {
-    console.error("Fetch error:", error);
-    throw error;
-  }
-}
 
 async function addNewItem(name, imageUrl, weather, species, token) {
   return fetch(`${baseUrl}/items`, {
@@ -64,6 +47,22 @@ async function addNewItem(name, imageUrl, weather, species, token) {
       species,
     }),
   }).then(checkResponse);
+}
+
+async function getItems() {
+  try {
+    const res = await fetch(`${baseUrl}/items`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    console.log("get items");
+    return checkResponse(res);
+  } catch (error) {
+    console.error("Fetch error:", error);
+    throw error;
+  }
 }
 
 async function deleteItemById(id, token) {

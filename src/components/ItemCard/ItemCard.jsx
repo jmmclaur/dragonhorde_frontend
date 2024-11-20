@@ -1,11 +1,3 @@
-// import react, use context, current user context, like/dislike button, css
-
-// clicks for like/dislike
-
-// form itself
-
-// export default ItemCard;
-
 import React, { useContext } from "react";
 import { CurrentUserContext } from "../../utils/contexts/CurrentUserContext";
 import likeActive from "../../assets/like-active.svg";

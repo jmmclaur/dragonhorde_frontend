@@ -1,8 +1,3 @@
-// imports
-// logo, API, toggleswitch
-// if a second page is needed, can create an 'About the Dragon Horde'
-
-//export default Header;
 import "./Header.css";
 import { Link } from "react-router-dom";
 import logo from "../../assets/dragonhorde_logo.png";
@@ -34,7 +29,7 @@ function Header({
   return (
     <header className="header">
       <Link to="/">
-        <img src={logo} alt="dragon horde logo big" className="header__logo" />
+        <img src={logo} alt="dragon horde logo" className="header__logo" />
       </Link>
       <p className="header__date-and-location">
         {" "}
@@ -48,7 +43,7 @@ function Header({
             type="button"
             className="header__dragon-btn"
           >
-            + Add Dragon
+            + ADD DRAGON
           </button>
           <Link className="header__link" to="/profile">
             <div className="header__user-container">
@@ -85,25 +80,4 @@ function Header({
   );
 }
 
-/*
-function Header({ handleRegisterClick, handleLoginClick }) {
-  return (
-    <header className="header">
-      <Link to="/">
-        <img className="header__logo" src={logo} alt="header" />
-      </Link>
-      <Link className="header__link" to="/profile">
-        <p className="header__username">Hello</p>
-      </Link>
-      <div className="header__auth">
-        <button className="header_register" onClick={handleRegisterClick}>
-          Sign Up
-        </button>
-        <button className="header__login" onClick={handleLoginClick}>
-          Login
-        </button>
-      </div>
-    </header>
-  );
-} */
 export default Header;

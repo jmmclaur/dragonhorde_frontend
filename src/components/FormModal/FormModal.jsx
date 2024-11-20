@@ -1,11 +1,3 @@
-// import css
-
-// functions
-
-// form itself
-
-// export default FormModal;
-
 import "./FormModal.css";
 
 function FormModal({
@@ -13,7 +5,6 @@ function FormModal({
   title,
   buttonText,
   isOpen,
-  closeActiveModal,
   onSubmit,
   showLink,
   linkText,
