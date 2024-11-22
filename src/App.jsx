@@ -350,8 +350,13 @@ function App() {
                   <About />
                 </div>
               </div>
+
               <div className="page__content">
                 <Footer />
+              </div>
+
+              <div className="landscape">
+                <Landscape />
               </div>
 
               <RegisterModal
