@@ -1,18 +1,22 @@
 .sidebar {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
+  margin-top: 25px;
   font-size: 20px;
   line-height: 25px;
   font-family: "CabinetGrotesk-Bold", sans-serif;
-  padding-right: 200px;
+  background: linear-gradient(rgb(67, 89, 214), transparent);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
 }
 
 .sidebar__username {
   display: inline-block;
   white-space: nowrap;
   font-weight: 700;
-  transform: translate(25%, -75%);
+  justify-content: center;
+  margin-right: 50px;
+  color: #fff;
 }
 
 sidebar__info {
@@ -27,6 +31,7 @@ sidebar__info {
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px #656fbe, 0 0 20px #4ae8d8, 0 0 60px #97f1fd;
 }
 
 .sidebar__edit {
@@ -34,11 +39,14 @@ sidebar__info {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  margin-right: 50px;
   padding: 0;
   cursor: pointer;
   background-color: transparent;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  color: #fff;
 }
 
 .sidebar__logout {
@@ -51,4 +59,21 @@ sidebar__info {
   background-color: transparent;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  color: #fff;
+}
+
+.nav {
+  border-style: none;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  padding-left: 25px;
+  padding-right: 60px;
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
 }

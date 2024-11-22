@@ -8,11 +8,6 @@ import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import { useContext } from "react";
 import { CurrentUserContext } from "../../utils/contexts/CurrentUserContext";
 
-/*
-function Header({}) {
-  return <div>Header</div>;
-} */
-
 function Header({
   handleRegisterClick,
   handleLoginClick,
@@ -28,14 +23,14 @@ function Header({
 
   return (
     <header className="header">
-      <Link to="/">
-        <img src={logo} alt="dragon horde logo" className="header__logo" />
-      </Link>
       <p className="header__date-and-location">
         {" "}
         {currentDate} , {weatherData.city}
       </p>
       <ToggleSwitch />
+      <Link to="/">
+        <img src={logo} alt="dragon horde logo" className="header__logo" />
+      </Link>
       {isLoggedIn ? (
         <>
           <button
@@ -43,7 +38,7 @@ function Header({
             type="button"
             className="header__dragon-btn"
           >
-            + ADD DRAGON
+            + Add Dragon
           </button>
           <Link className="header__link" to="/profile">
             <div className="header__user-container">
@@ -68,14 +63,13 @@ function Header({
             className="header__registration"
             onClick={handleRegisterClick}
           >
-            Sign Up
+            Sign Up /
           </button>
           <button className="header__login" onClick={handleLoginClick}>
             Login
           </button>
         </div>
       )}
-      ;
     </header>
   );
 }

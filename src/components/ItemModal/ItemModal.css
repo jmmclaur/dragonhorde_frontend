@@ -64,7 +64,7 @@
   line-height: 24px;
   position: absolute;
   border: none;
-  margin-top: -45px;
+  margin-top: -35px;
   right: 25px;
   cursor: pointer;
   background-color: transparent;
@@ -80,11 +80,15 @@
   font: 20px;
   line-height: 24px;
   font-family: "CabinetGrotesk-Bold", sans-serif;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.modal__species {
   margin: 0;
 }
 
 .modal__footer {
-  padding-top: 20px;
   padding-left: 32px;
   padding-bottom: 32px;
 }

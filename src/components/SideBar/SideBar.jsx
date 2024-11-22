@@ -16,8 +16,11 @@ function SideBar({ handleEditClick, handleLogOut }) {
         <p className="sidebar__username">{currentUser.name}</p>
       </div>
       <button className="sidebar__edit" onClick={handleEditClick}>
-        Update Profile Data
+        Profile Settings
       </button>
+      <a href="/about" className="nav">
+        About
+      </a>
       <button onClick={handleLogOut} className="sidebar__logout">
         Log Out
       </button>

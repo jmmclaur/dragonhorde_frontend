@@ -90,10 +90,10 @@ export const coordinates = {
 
 export const defaultWeatherOptions = {
   day: {
-    url: new URL("../assets/day/default_day.png", import.meta.url).href,
+    url: new URL("../assets/day/default_day1.png", import.meta.url).href,
   },
   night: {
-    url: new URL("../assets/night/default_night.png", import.meta.url).href,
+    url: new URL("../assets/night/default_night1.png", import.meta.url).href,
   },
 };
 
@@ -101,61 +101,61 @@ export const weatherOptions = [
   {
     day: true,
     condition: "clear",
-    url: new URL("../assets/day/clear_day.png", import.meta.url).href,
+    url: new URL("../assets/day/clear_day1.png", import.meta.url).href,
   },
   {
     day: false,
     condition: "clear",
-    url: new URL("../assets/night/clear_night.png", import.meta.url).href,
+    url: new URL("../assets/night/clear_night1.png", import.meta.url).href,
   },
   {
     day: true,
     condition: "cloudy",
-    url: new URL("../assets/day/cloudy_day.png", import.meta.url).href,
+    url: new URL("../assets/day/cloudy_day1.png", import.meta.url).href,
   },
   {
     day: false,
     condition: "cloudy",
-    url: new URL("../assets/night/cloudy_night.png", import.meta.url).href,
+    url: new URL("../assets/night/cloudy_night1.png", import.meta.url).href,
   },
   {
     day: true,
     condition: "rainy",
-    url: new URL("../assets/day/rainy_day.png", import.meta.url).href,
+    url: new URL("../assets/day/rainy_day1.png", import.meta.url).href,
   },
   {
     day: false,
     condition: "rainy",
-    url: new URL("../assets/night/rainy_night.png", import.meta.url).href,
+    url: new URL("../assets/night/rainy_night1.png", import.meta.url).href,
   },
   {
     day: true,
     condition: "snowy",
-    url: new URL("../assets/day/snowy_day.png", import.meta.url).href,
+    url: new URL("../assets/day/snowy_day1.png", import.meta.url).href,
   },
   {
     day: false,
     condition: "snowy",
-    url: new URL("../assets/night/snowy_night.png", import.meta.url).href,
+    url: new URL("../assets/night/snowy_night1.png", import.meta.url).href,
   },
   {
     day: true,
     condition: "stormy",
-    url: new URL("../assets/day/stormy_day.png", import.meta.url).href,
+    url: new URL("../assets/day/stormy_day1.png", import.meta.url).href,
   },
   {
     day: false,
     condition: "stormy",
-    url: new URL("../assets/night/stormy_night.png", import.meta.url).href,
+    url: new URL("../assets/night/stormy_night1.png", import.meta.url).href,
   },
   {
     day: true,
     condition: "foggy",
-    url: new URL("../assets/day/foggy_day.png", import.meta.url).href,
+    url: new URL("../assets/day/foggy_day1.png", import.meta.url).href,
   },
   {
     day: false,
     condition: "foggy",
-    url: new URL("../assets/night/foggy_night.png", import.meta.url).href,
+    url: new URL("../assets/night/foggy_night1.png", import.meta.url).href,
   },
 ];

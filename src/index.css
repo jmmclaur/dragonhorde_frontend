@@ -1,5 +1,5 @@
 :root {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: fantasy;
   line-height: 1.5;
   font-weight: 400;
 
@@ -26,7 +26,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+
   min-height: 100vh;
 }
 
@@ -62,10 +62,10 @@ button:focus-visible {
   :root {
     color: #1a1a1a;
 
-    background-color: #ffffff;
+    background-color: #ffff;
   }
   a:hover {
-    color: #747bff;
+    color: #6a6c8d;
   }
   button {
     background-color: #f9f9f9;

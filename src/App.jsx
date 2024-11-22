@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./components/App/App.css";
 import Header from "./components/Header/Header";
-import Parallax from "./components/Mountains/Mountains";
+import Landscape from "./components/Parallax/Parallax";
 import Footer from "./components/Footer/Footer";
 import Profile from "./components/Profile/Profile";
 import About from "./components/About/About";
@@ -285,101 +285,111 @@ function App() {
   };
 
   /////
-
+  /*  <div className="parallax">
+        <Landscape />
+      </div> */
   //skeleton structure
   return (
-    <CurrentUserContext.Provider value={currentUser}>
-      <div className="page">
-        <CurrentTemperatureUnitContext.Provider
-          value={{ currentTemperatureUnit, handleToggleSwitchChange }}
-        >
-          <div className="page__content">
-            <Parallax />
-            <Header
-              handleRegisterClick={handleRegisterClick}
-              handleLoginClick={handleLoginClick}
-              handleAddClick={handleAddClick}
-              isLoggedIn={isLoggedIn}
-              weatherData={weatherData}
-            />
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <Main
-                    updateDefaultDragonItems={defaultDragonItems}
-                    handleAddClick={handleAddClick}
-                    handleCardClick={handleCardClick}
-                    isLoggedIn={isLoggedIn}
-                    weatherData={weatherData}
-                    onCardLike={handleCardLike}
-                  />
-                }
-              />
-              <Route
-                path="/profile"
-                element={
-                  <ProtectedRoute isLoggedIn={isLoggedIn}>
-                    {currentUser ? (
-                      <Profile
+    <div className="background">
+      <div className="preheader">
+        <p>Welcome to the Dragon Horde</p>
+      </div>
+      <div className="body">
+        <CurrentUserContext.Provider value={currentUser}>
+          <div className="page">
+            <CurrentTemperatureUnitContext.Provider
+              value={{ currentTemperatureUnit, handleToggleSwitchChange }}
+            >
+              <div className="page__content">
+                <Header
+                  handleRegisterClick={handleRegisterClick}
+                  handleLoginClick={handleLoginClick}
+                  handleAddClick={handleAddClick}
+                  isLoggedIn={isLoggedIn}
+                  weatherData={weatherData}
+                />
+                <Routes>
+                  <Route
+                    path="/"
+                    element={
+                      <Main
+                        updateDefaultDragonItems={defaultDragonItems}
                         handleAddClick={handleAddClick}
                         handleCardClick={handleCardClick}
-                        handleEditClick={handleEditClick}
-                        defaultDragonItems={defaultDragonItems}
-                        handleLogOut={handleLogOut}
                         isLoggedIn={isLoggedIn}
-                        setIsLoggedIn={setIsLoggedIn}
-                        name={currentUser.name}
-                        avatar={currentUser.avatar}
+                        weatherData={weatherData}
                         onCardLike={handleCardLike}
                       />
-                    ) : (
-                      <div>Loading...</div>
-                    )}
-                  </ProtectedRoute>
-                }
+                    }
+                  />
+                  <Route
+                    path="/profile"
+                    element={
+                      <ProtectedRoute isLoggedIn={isLoggedIn}>
+                        {currentUser ? (
+                          <Profile
+                            handleAddClick={handleAddClick}
+                            handleCardClick={handleCardClick}
+                            handleEditClick={handleEditClick}
+                            defaultDragonItems={defaultDragonItems}
+                            handleLogOut={handleLogOut}
+                            isLoggedIn={isLoggedIn}
+                            setIsLoggedIn={setIsLoggedIn}
+                            name={currentUser.name}
+                            avatar={currentUser.avatar}
+                            onCardLike={handleCardLike}
+                          />
+                        ) : (
+                          <div>Loading...</div>
+                        )}
+                      </ProtectedRoute>
+                    }
+                  />
+                </Routes>
+                <div className="about">
+                  <About />
+                </div>
+              </div>
+              <div className="page__content">
+                <Footer />
+              </div>
+
+              <RegisterModal
+                activeModal={activeModal}
+                handleRegistration={handleRegistration}
+                handleLogin={handleLogin}
+                onClose={closeActiveModal}
               />
-            </Routes>
-            <About />
+              <LoginModal
+                activeModal={activeModal}
+                handleLogin={handleLogin}
+                handleRegisterClick={handleRegisterClick}
+                onClose={closeActiveModal}
+              />
+              <AddItemModal
+                onClick={handleAddClick}
+                activeModal={activeModal}
+                onAddNewItem={onAddNewItem}
+                handleCloseModal={closeActiveModal}
+                onClose={closeActiveModal}
+              />
+              <ItemModal
+                activeModal={activeModal}
+                card={selectedCard}
+                closeActiveModal={closeActiveModal}
+                handleDeleteItem={handleDelete}
+                handleClickOffModal={closeActiveModal}
+              />
+              <ProfileEditModal
+                activeModal={activeModal}
+                handleProfileEdit={handleProfileEdit}
+                closeActiveModal={closeActiveModal}
+              />
+            </CurrentTemperatureUnitContext.Provider>
           </div>
-          <div className="page__content">
-            <DragonSection />
-            <Footer />
-          </div>
-          <RegisterModal
-            activeModal={activeModal}
-            handleRegistration={handleRegistration}
-            handleLogin={handleLogin}
-            onClose={closeActiveModal}
-          />
-          <LoginModal
-            activeModal={activeModal}
-            handleLogin={handleLogin}
-            handleRegisterClick={handleRegisterClick}
-            onClose={closeActiveModal}
-          />
-          <AddItemModal
-            onClick={handleAddClick}
-            activeModal={activeModal}
-            onAddNewItem={onAddNewItem}
-            handleCloseModal={closeActiveModal}
-            onClose={closeActiveModal}
-          />
-          <ItemModal
-            activeModal={activeModal}
-            card={selectedCard}
-            closeActiveModal={closeActiveModal}
-            handleDeleteItem={handleDelete}
-            handleClickOffModal={closeActiveModal}
-          />
-          <ProfileEditModal
-            activeModal={activeModal}
-            handleProfileEdit={handleProfileEdit}
-            closeActiveModal={closeActiveModal}
-          />
-        </CurrentTemperatureUnitContext.Provider>
+        </CurrentUserContext.Provider>
       </div>
-    </CurrentUserContext.Provider>
+    </div>
   );
 }
 

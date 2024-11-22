@@ -4,6 +4,7 @@
   font-weight: 700;
   font-family: "CabinetGrotesk-Bold", sans-serif;
   gap: 25px;
+  color: #fff;
 }
 
 .dragon-section__items {
@@ -14,6 +15,7 @@
   list-style-type: none;
   gap: 20px;
   width: 100%;
+  padding-left: 10px;
 }
 
 .dragons-section__buttons {
@@ -21,7 +23,9 @@
   align-items: self-start;
   gap: 20px;
   font-size: 20px;
+  margin-top: 70px;
   padding-left: 50px;
+  color: #fff;
 }
 
 .dragons-section__add-item-btn {
