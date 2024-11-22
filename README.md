@@ -11,9 +11,9 @@ Currently, two official plugins are available:
 
 The Dragon Horde is a website that allows users to collect various drakes and create an index of any they spot in the wild.
 
-Users will be able to create new cards with a dragon's name, species, picture and diet. They can like/unlike the cards as well as remove them from the list. When they add two of a kind, they'll receive a crown icon.
+Users will be able to create new cards with a dragon's name, species, picture and climate. They can like/unlike the cards as well as remove them from the list. When they add two of a kind, they'll receive a crown icon.
 
-If time permits, I'd like to include a journal where users can include descriptions of sightings, and if they make three entries then they receive a laurel or wings.
+If time permits, I'd like to include a journal where users can include descriptions of sightings, potential spells to ward off attacks, and if they make three entries then they receive a laurel or wings.
 
 Possible 3rd Party APIs -
 
