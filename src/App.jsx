@@ -351,10 +351,6 @@ function App() {
                 </div>
               </div>
 
-              <div className="page__content">
-                <Footer />
-              </div>
-
               <div className="landscape">
                 <Landscape />
               </div>
@@ -393,6 +389,9 @@ function App() {
             </CurrentTemperatureUnitContext.Provider>
           </div>
         </CurrentUserContext.Provider>
+      </div>
+      <div className="page__content">
+        <Footer />
       </div>
     </div>
   );
