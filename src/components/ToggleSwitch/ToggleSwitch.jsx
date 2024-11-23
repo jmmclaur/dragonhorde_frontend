@@ -1,11 +1,3 @@
-// import react, use context, api (if same format), css
-
-// const
-
-// form itself
-
-// export default ToggleSwitch;
-
 import React from "react";
 import "./ToggleSwitch.css";
 import { useContext } from "react";

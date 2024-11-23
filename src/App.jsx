@@ -91,11 +91,6 @@ function App() {
       : setCurrentTemperatureUnit("F");
   };
 
-  /*
-  const handleScroll = () => {
-    setActiveModal("scroll");
-  }; */
-
   //useEffect
   useEffect(() => {
     if (!activeModal) return;
@@ -202,42 +197,12 @@ function App() {
     return addNewItem(name, imageUrl, weather, species, jwt)
       .then((item) => {
         setDragonItems([item.data, ...defaultDragonItems]);
-        /*{Array.isArray(defaultDragonItems) && defaultDragonItems.map((item) => (
-          // Render item components here
-
-        ))}; */
-        console.log("hi");
         closeActiveModal();
       })
       .catch((err) => {
         console.error(err);
       });
   };
-
-  /*
-  const addNewItem = {
-    name: "Blah",
-    dragon: {
-      name: "",
-      imageUrl: "",
-      weather: "",
-      species: "",
-    },
-  };
-
-  const dragonName = addNewItem.dragon?.name; */
-  /*
-  const adventurer = {
-    name: "Alice",
-    cat: {
-      name: "Dinah",
-    },
-  };
-
-  const dogName = adventurer.dog?.name;
-  console.log(dogName);
-  console.log(adventurer.someNonExistentMethod?.());
-  */
 
   //new fixing add item button
   const handleDelete = async (id) => {
@@ -284,10 +249,6 @@ function App() {
           });
   };
 
-  /////
-  /*  <div className="parallax">
-        <Landscape />
-      </div> */
   //skeleton structure
   return (
     <div className="background">

@@ -48,7 +48,7 @@ export const defaultDragonItems = [
       "https://th.bing.com/th/id/OIP.-uaZck606ZaxOLWscftuvgHaJl?w=137&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7",
   },
   {
-    _id: 5,
+    _id: 6,
     name: "Bronze",
     weather: "hot",
     species: "metallic",
@@ -56,7 +56,7 @@ export const defaultDragonItems = [
       "https://th.bing.com/th/id/OIP.ibLIn28_ql5i0GoGCRtIXQHaKS?w=158&h=219&c=7&r=0&o=5&dpr=1.5&pid=1.7",
   },
   {
-    _id: 5,
+    _id: 7,
     name: "Copper",
     weather: "warm",
     species: "metallic",
@@ -64,7 +64,7 @@ export const defaultDragonItems = [
       "https://th.bing.com/th/id/OIP.0ObfrmntMTeIqbHXM0uHpAHaKT?w=136&h=190&c=7&r=0&o=5&dpr=1.5&pid=1.7",
   },
   {
-    _id: 5,
+    _id: 8,
     name: "Brass",
     weather: "warm",
     species: "metallic",
@@ -72,7 +72,7 @@ export const defaultDragonItems = [
       "https://th.bing.com/th/id/OIP.pxrC1zZkNj4NEKezIuDZ4AAAAA?w=236&h=199&c=7&r=0&o=5&dpr=1.5&pid=1.7",
   },
   {
-    _id: 5,
+    _id: 9,
     name: "Silver",
     weather: "cold",
     species: "metallic",

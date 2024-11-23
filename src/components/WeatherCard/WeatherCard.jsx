@@ -1,10 +1,3 @@
-/*if new doesn't work, use this
-function WeatherCard({}) {
-  return <div>WeatherCard</div>;
-}
-
-export default WeatherCard; */
-
 import "./WeatherCard.css";
 import { weatherOptions, defaultWeatherOptions } from "../../utils/constants";
 import { useContext } from "react";

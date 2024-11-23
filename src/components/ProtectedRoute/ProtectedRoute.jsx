@@ -1,9 +1,3 @@
-// import navigate
-
-// function
-
-// export default ProtectedRoute;
-
 import { Navigate } from "react-router-dom";
 
 function ProtectedRoute({ isLoggedIn, children }) {

@@ -1,3 +1,4 @@
+/* try adding something like this in the future
 var nbElements = 50; // Number of stars & sparkles
 
 // CSS Classes available
@@ -23,3 +24,4 @@ for (var i = 0; i < nbElements; i++) {
 function rand(min, max) {
   return Math.floor(Math.random() * max + min);
 }
+ */

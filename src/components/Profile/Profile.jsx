@@ -20,21 +20,6 @@ const Profile = ({
     console.log("Missing props - Name or Avatar is undefined");
   }
 
-  /*
-  return (
-    <div className="profile">
-      <section className="profile__dragons">
-        <DragonSection
-          handleCardClick={handleCardClick}
-          handleAddClick={handleAddClick}
-          defaultDragonItems={defaultDragonItems}
-          isLoggedIn={isLoggedIn}
-          onCardLike={onCardLike}
-        />
-      </section>
-    </div>
-  ); */
-
   return (
     <div className="profile">
       <section className="profile__sidebar">
