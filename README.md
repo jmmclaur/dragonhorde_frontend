@@ -22,6 +22,7 @@ Possible 3rd Party APIs -
 5. https://freesound.org/docs/api/ (free music samples)
 
 Link to Frontend: https://github.com/jmmclaur/dragonhorde_frontend
+Link to Pull-Request: https://github.com/jmmclaur/dragonhorde_frontend/pull/1
 
 Official Plugins: -
 
