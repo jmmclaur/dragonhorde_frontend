@@ -24,6 +24,13 @@ Possible 3rd Party APIs -
 Link to Frontend: https://github.com/jmmclaur/dragonhorde_frontend
 Link to Pull-Request: https://github.com/jmmclaur/dragonhorde_frontend/pull/1
 
+Deployed Links: https://dragonhorde.jmmclaur.jumpingcrab.com/
+
+(Subdomains)
+dragonhorde.jmmclaur@jumpingcrab.com
+www.dragonhorde.jmmclaur.jumpingcrab.com
+api.dragonhorde.jmmclaur.jumpingcrab.com
+
 Official Plugins: -
 
 Trello Link: https://trello.com/invite/b/6721311910945b9453cf9c4b/ATTI5e6a2f60faff29d3ca2e31fb854f10b631BD1772/dragon-horde-final-project
