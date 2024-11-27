@@ -13,7 +13,6 @@
 .bg {
   display: flex;
   background-image: url("../../assets/bg.png");
-  width: 100%;
 }
 
 .layer1 {
@@ -25,13 +24,11 @@
   box-shadow: 0 0 10px #656fbe, 0 0 20px #4ae8d8, 0 0 60px #97f1fd;
 }
 .image-1 {
-  display: flex;
-  flex-direction: row-reverse;
   position: relative;
-  margin: 0;
-  left: 0;
-  top: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699), 0 6px 20px rgba(0, 0, 0, 0.19);
+  width: 300px;
+  height: 300px;
+  margin: 100px 20px 0px;
 }
 .black {
   display: flex;
@@ -53,9 +50,6 @@
   display: flex;
   flex-direction: row-reverse;
   position: relative;
-  margin: 0;
-  left: 0;
-  top: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699), 0 6px 20px rgba(0, 0, 0, 0.19);
 }
 .red {
@@ -78,9 +72,6 @@
   display: flex;
   flex-direction: row-reverse;
   position: relative;
-  margin: 0;
-  left: 0;
-  top: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699), 0 6px 20px rgba(0, 0, 0, 0.19);
 }
 .green {
@@ -103,9 +94,7 @@
   display: flex;
   flex-direction: row-reverse;
   position: relative;
-  margin: 0;
-  left: 0;
-  top: 0;
+
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699), 0 6px 20px rgba(0, 0, 0, 0.19);
 }
 .blue {
@@ -128,9 +117,6 @@
   display: flex;
   flex-direction: row-reverse;
   position: relative;
-  margin: 0;
-  left: 0;
-  top: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699), 0 6px 20px rgba(0, 0, 0, 0.19);
 }
 .white {
@@ -153,9 +139,6 @@
   display: flex;
   flex-direction: row-reverse;
   position: relative;
-  margin: 0;
-  left: 0;
-  top: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699), 0 6px 20px rgba(0, 0, 0, 0.19);
 }
 .gold {
@@ -178,9 +161,7 @@
   display: flex;
   flex-direction: row-reverse;
   position: relative;
-  margin: 0;
-  left: 0;
-  top: 0;
+
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699), 0 6px 20px rgba(0, 0, 0, 0.19);
 }
 .bronze {
@@ -203,9 +184,6 @@
   display: flex;
   flex-direction: row-reverse;
   position: relative;
-  margin: 0;
-  left: 0;
-  top: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699), 0 6px 20px rgba(0, 0, 0, 0.19);
 }
 .copper {
@@ -228,9 +206,7 @@
   display: flex;
   flex-direction: row-reverse;
   position: relative;
-  margin: 0;
-  left: 0;
-  top: 0;
+
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699), 0 6px 20px rgba(0, 0, 0, 0.19);
 }
 .brass {
@@ -253,9 +229,6 @@
   display: flex;
   flex-direction: row-reverse;
   position: relative;
-  margin: 0;
-  left: 0;
-  top: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699), 0 6px 20px rgba(0, 0, 0, 0.19);
 }
 .silver {

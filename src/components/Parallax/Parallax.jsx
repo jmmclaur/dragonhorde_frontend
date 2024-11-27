@@ -10,7 +10,7 @@ function Landscape() {
         pages={10}
         style={{
           backgroundColor: "#388E8E",
-          width: "1260px",
+          width: "1180px",
           height: "1500px",
           padding: "0",
         }}
@@ -27,11 +27,6 @@ function Landscape() {
             src="https://i.pinimg.com/originals/88/56/e5/8856e5f2a83209a359a983a25f471117.png"
             alt="black dragon"
             className="image-1"
-            style={{
-              width: "300px",
-              height: "300px",
-              margin: "100px 20px 0 20px",
-            }}
           />
           <p
             className="black"
