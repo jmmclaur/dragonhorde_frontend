@@ -28,6 +28,9 @@ function Header({
       <Link to="/">
         <img src={logo} alt="dragon horde logo" className="header__logo" />
       </Link>
+      <a href="/about" className="nav1">
+        About
+      </a>
       {isLoggedIn ? (
         <>
           <button

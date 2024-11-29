@@ -41,13 +41,13 @@
 
 .header__auth {
   display: flex;
-  margin-left: 170px;
+  margin-left: 60px;
 }
 
 .header__registration {
   border-style: none;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 30px;
   line-height: 24px;
   color: #fff;
   background-color: transparent;
@@ -59,7 +59,7 @@
   border-style: none;
   font-weight: 700;
   font-family: "CabinetGrotesk-Bold", sans-serif;
-  font-size: 50px;
+  font-size: 30px;
   line-height: 24px;
   color: #fff;
   background-color: transparent;
@@ -73,7 +73,7 @@
   cursor: pointer;
   font-weight: 700;
   font-size: 20px;
-  margin-left: 200px;
+  margin-left: 15px;
   color: #fff;
 }
 
@@ -83,7 +83,6 @@
   gap: 12px;
   line-height: 24px;
   font-size: 20px;
-  margin-left: 25px;
 }
 
 .header__username {
@@ -115,4 +114,14 @@
   margin-left: 5px;
   display: inline-flex;
   box-shadow: 0 0 10px #656fbe, 0 0 20px #4ae8d8, 0 0 60px #97f1fd;
+}
+
+.nav1 {
+  padding-left: 120px;
+  margin: 0;
+  font-weight: 700;
+  font-family: "CabinetGrotesk-Bold", sans-serif;
+  font-size: 20px;
+  color: #fff;
+  z-index: 1;
 }

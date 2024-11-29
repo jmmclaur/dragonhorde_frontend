@@ -25,6 +25,7 @@ function WeatherCard({ weatherData }) {
           ? `${weatherData.temp.F}°F`
           : `${weatherData.temp.C}°C`}
       </p>
+
       <img
         src={link}
         alt={weatherOption?.condition || "default"}
