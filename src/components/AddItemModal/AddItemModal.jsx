@@ -105,7 +105,7 @@ const AddItemModal = ({
             onChange={handleWeatherChange}
             name="weather_item"
           />
-          Cold
+          cold
         </label>
       </fieldset>
       <fieldset className="modal__radio-buttons">
