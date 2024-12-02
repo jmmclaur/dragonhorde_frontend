@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist npm run build && scp -r ./dist/*mclaurinjessica3@dragonhorde.jmmclaur@jumpingcrab.com:/home/mclaurinjessica3/frontend",
-    "start": "nodemon index.js",
+    "start": "node app.js",
     "dbstart": "json-server --id _id --port 3000"
   },
   "dependencies": {
