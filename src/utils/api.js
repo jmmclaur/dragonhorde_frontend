@@ -37,6 +37,7 @@ const updateUserInfo = async (name, avatar, token) => {
 };
 
 async function addNewItem(name, imageUrl, weather, species, token) {
+  console.log("weather: " + weather);
   return fetch(`${baseUrl}/items`, {
     method: "POST",
     headers: {
