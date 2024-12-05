@@ -5,11 +5,11 @@
 
 .switch__box {
   border-radius: 25px;
-  border: 2px solid #fff;
+  border: 2px solid rgb(248, 207, 84);
   width: 50px;
   height: 30px;
   appearance: none;
-  margin-right: 100px;
+  margin-right: 20px;
 }
 
 .switch__slider {
@@ -35,19 +35,19 @@
 
 .switch__active {
   font: 16px;
-  color: white;
+  color: #fff;
 }
 
 .switch__temp-C {
   position: absolute;
   left: 10px;
   top: -9px;
-  color: white;
+  color: rgb(248, 207, 84);
 }
 
 .switch__temp-F {
   position: absolute;
   top: -9px;
   left: 36px;
-  color: white;
+  color: rgb(248, 207, 84);
 }

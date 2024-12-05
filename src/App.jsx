@@ -112,7 +112,6 @@ function App() {
     };
   }, [activeModal]);
 
- 
   useEffect(() => {
     getItems()
       .then((data) => {
@@ -253,9 +252,6 @@ function App() {
   //skeleton structure
   return (
     <div className="background">
-      <div className="preheader">
-        <p>Welcome to the Dragon Horde</p>
-      </div>
       <div className="body">
         <CurrentUserContext.Provider value={currentUser}>
           <div className="page">
@@ -307,10 +303,8 @@ function App() {
                       </ProtectedRoute>
                     }
                   />
+                  <Route path="/about" element={<About about={About} />} />
                 </Routes>
-                <div className="about">
-                  <About />
-                </div>
               </div>
 
               <div className="landscape">

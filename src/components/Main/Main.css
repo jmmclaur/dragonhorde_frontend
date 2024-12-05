@@ -7,8 +7,8 @@
   align-items: center;
   flex-wrap: wrap;
   margin: 0;
-  padding-left: auto;
-  padding-right: auto;
+  padding-left: 122px;
+  padding-bottom: 25px;
   list-style-type: none;
   gap: 21px;
 }
