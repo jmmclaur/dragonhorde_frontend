@@ -1,27 +1,27 @@
 import { useEffect, useState } from "react";
-import "./components/App/App.css";
-import Header from "./components/Header/Header";
-import Landscape from "./components/Parallax/Parallax";
-import Footer from "./components/Footer/Footer";
-import Profile from "./components/Profile/Profile";
-import About from "./components/About/About";
-import DragonSection from "./components/DragonSection/DragonSection";
-import RegisterModal from "./components/RegisterModal/RegisterModal";
-import LoginModal from "./components/LoginModal/LoginModal";
-import AddItemModal from "./components/AddItemModal/AddItemModal";
-import ItemModal from "./components/ItemModal/ItemModal";
-import ProfileEditModal from "./components/ProfileEditModal/ProfileEditModal";
-import Main from "./components/Main/Main";
-import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
-import { getItems, addNewItem, deleteItemById } from "./utils/api";
-import { CurrentUserContext } from "./utils/contexts/CurrentUserContext";
-import { setToken, getToken, removeToken } from "./utils/token";
+import "../App/App.css";
+import Header from "../Header/Header";
+import Landscape from "../Parallax/Parallax";
+import Footer from "../Footer/Footer";
+import Profile from "../Profile/Profile";
+import About from "../About/About";
+import DragonSection from "../DragonSection/DragonSection";
+import RegisterModal from "../RegisterModal/RegisterModal";
+import LoginModal from "../LoginModal/LoginModal";
+import AddItemModal from "../AddItemModal/AddItemModal";
+import ItemModal from "../ItemModal/ItemModal";
+import ProfileEditModal from "../ProfileEditModal/ProfileEditModal";
+import Main from "../Main/Main";
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
+import { getItems, addNewItem, deleteItemById } from "../../utils/api";
+import { CurrentUserContext } from "../../utils/contexts/CurrentUserContext";
+import { setToken, getToken, removeToken } from "../../utils/token";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import { getWeather, filterWeatherData } from "./utils/weatherApi";
-import { CurrentTemperatureUnitContext } from "./utils/contexts/CurrentTemperatureUnitContext";
-import { coordinates, apiKey } from "./utils/constants";
-import * as api from "./utils/api";
-import * as auth from "./utils/auth/auth";
+import { getWeather, filterWeatherData } from "../../utils/weatherApi";
+import { CurrentTemperatureUnitContext } from "../../utils/contexts/CurrentTemperatureUnitContext";
+import { coordinates, apiKey } from "../../utils/constants";
+import * as api from "../../utils/api";
+import * as auth from "../../utils/auth/auth";
 import React from "react";
 
 //structure
@@ -252,6 +252,10 @@ function App() {
   //skeleton structure
   return (
     <div className="background">
+      <div className="preheader">
+        <h1>Welcome to the Dragon Horde</h1>
+      </div>
+
       <div className="body">
         <CurrentUserContext.Provider value={currentUser}>
           <div className="page">
@@ -345,9 +349,9 @@ function App() {
             </CurrentTemperatureUnitContext.Provider>
           </div>
         </CurrentUserContext.Provider>
-      </div>
-      <div className="page__content">
-        <Footer />
+        <div className="page__content">
+          <Footer />
+        </div>
       </div>
     </div>
   );

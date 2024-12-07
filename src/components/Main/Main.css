@@ -26,3 +26,10 @@
   width: 325px;
   text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+  .cards__list {
+    display: flex;
+    padding-left: 190px;
+  }
+}

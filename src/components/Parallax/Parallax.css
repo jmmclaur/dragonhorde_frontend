@@ -1,240 +1,71 @@
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: -1;
-}
-
 .landscape-container {
-  width: 100px;
   background-color: linear-gradient(#af002a, #de4341);
+  border-radius: 15%;
 }
 
 .bg {
-  display: flex;
   background-image: url("../../assets/bg.png");
+  background-size: cover;
+  border-radius: 15%;
 }
 
 .layer1 {
-  display: flex;
-  flex-direction: row;
-  width: 100px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "title title"
+    "image description";
+  gap: 10px;
   overflow: hidden;
-  justify-content: center;
+  justify-content: start;
   box-shadow: 0 0 10px #656fbe, 0 0 20px #4ae8d8, 0 0 60px #97f1fd;
+  border-radius: 15%;
+  background-color: #708090;
+  height: 1100px;
 }
-.image-1 {
-  position: relative;
+.card_image {
+  grid-area: image;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699), 0 6px 20px rgba(0, 0, 0, 0.19);
-  width: 300px;
-  height: 300px;
-  margin: 100px 20px 0px;
+  height: 500px;
+  width: 500px;
+  margin: 0 50px 0 50px;
 }
-.black {
-  display: flex;
-  flex-direction: row;
+.dragon_name {
+  grid-area: title;
   color: #fdd017;
-  font-size: 30px;
+  font-size: 100px;
   text-shadow: 2px 2px rgb(33, 45, 70);
-}
-
-.layer2 {
-  display: flex;
-  flex-direction: row;
-  width: 100px;
-  overflow: hidden;
+  padding-left: 220px;
+  padding-top: 50px;
+  padding-bottom: 0px;
   justify-content: center;
-  box-shadow: 0 0 10px #656fbe, 0 0 20px #4ae8d8, 0 0 60px #97f1fd;
+  height: 25px;
 }
-.image-2 {
-  display: flex;
-  flex-direction: row-reverse;
-  position: relative;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699), 0 6px 20px rgba(0, 0, 0, 0.19);
-}
-.red {
-  display: flex;
-  flex-direction: row;
-  color: #fdd017;
+.description {
+  grid-area: description;
+  margin-top: 150px;
+  margin-right: 50px;
   font-size: 30px;
-  text-shadow: 2px 2px rgb(33, 45, 70);
 }
 
-.layer3 {
-  display: flex;
-  flex-direction: row;
-  width: 100px;
-  overflow: hidden;
-  justify-content: center;
-  box-shadow: 0 0 10px #656fbe, 0 0 20px #4ae8d8, 0 0 60px #97f1fd;
-}
-.image-3 {
-  display: flex;
-  flex-direction: row-reverse;
-  position: relative;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699), 0 6px 20px rgba(0, 0, 0, 0.19);
-}
-.green {
-  display: flex;
-  flex-direction: row;
-  color: #fdd017;
-  font-size: 30px;
-  text-shadow: 2px 2px rgb(33, 45, 70);
-}
+@media screen and (max-width: 768px) {
+  .bg {
+    width: 80%;
+  }
 
-.layer4 {
-  display: flex;
-  flex-direction: row;
-  width: 100px;
-  overflow: hidden;
-  justify-content: center;
-  box-shadow: 0 0 10px #656fbe, 0 0 20px #4ae8d8, 0 0 60px #97f1fd;
-}
-.image-4 {
-  display: flex;
-  flex-direction: row-reverse;
-  position: relative;
-
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699), 0 6px 20px rgba(0, 0, 0, 0.19);
-}
-.blue {
-  display: flex;
-  flex-direction: row;
-  color: #fdd017;
-  font-size: 30px;
-  text-shadow: 2px 2px rgb(33, 45, 70);
-}
-
-.layer5 {
-  display: flex;
-  flex-direction: row;
-  width: 100px;
-  overflow: hidden;
-  justify-content: center;
-  box-shadow: 0 0 10px #656fbe, 0 0 20px #4ae8d8, 0 0 60px #97f1fd;
-}
-.image-5 {
-  display: flex;
-  flex-direction: row-reverse;
-  position: relative;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699), 0 6px 20px rgba(0, 0, 0, 0.19);
-}
-.white {
-  display: flex;
-  flex-direction: row;
-  color: #fdd017;
-  font-size: 30px;
-  text-shadow: 2px 2px rgb(33, 45, 70);
-}
-
-.layer6 {
-  display: flex;
-  flex-direction: row;
-  width: 100px;
-  overflow: hidden;
-  justify-content: center;
-  box-shadow: 0 0 10px #656fbe, 0 0 20px #4ae8d8, 0 0 60px #97f1fd;
-}
-.image-6 {
-  display: flex;
-  flex-direction: row-reverse;
-  position: relative;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699), 0 6px 20px rgba(0, 0, 0, 0.19);
-}
-.gold {
-  display: flex;
-  flex-direction: row;
-  color: #fdd017;
-  font-size: 30px;
-  text-shadow: 2px 2px rgb(33, 45, 70);
-}
-
-.layer7 {
-  display: flex;
-  flex-direction: row;
-  width: 100px;
-  overflow: hidden;
-  justify-content: center;
-  box-shadow: 0 0 10px #656fbe, 0 0 20px #4ae8d8, 0 0 60px #97f1fd;
-}
-.image-7 {
-  display: flex;
-  flex-direction: row-reverse;
-  position: relative;
-
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699), 0 6px 20px rgba(0, 0, 0, 0.19);
-}
-.bronze {
-  display: flex;
-  flex-direction: row;
-  color: #fdd017;
-  font-size: 30px;
-  text-shadow: 2px 2px rgb(33, 45, 70);
-}
-
-.layer8 {
-  display: flex;
-  flex-direction: row;
-  width: 100px;
-  overflow: hidden;
-  justify-content: center;
-  box-shadow: 0 0 10px #656fbe, 0 0 20px #4ae8d8, 0 0 60px #97f1fd;
-}
-.image-8 {
-  display: flex;
-  flex-direction: row-reverse;
-  position: relative;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699), 0 6px 20px rgba(0, 0, 0, 0.19);
-}
-.copper {
-  display: flex;
-  flex-direction: row;
-  color: #fdd017;
-  font-size: 30px;
-  text-shadow: 2px 2px rgb(33, 45, 70);
-}
-
-.layer9 {
-  display: flex;
-  flex-direction: row;
-  width: 100px;
-  overflow: hidden;
-  justify-content: center;
-  box-shadow: 0 0 10px #656fbe, 0 0 20px #4ae8d8, 0 0 60px #97f1fd;
-}
-.image-9 {
-  display: flex;
-  flex-direction: row-reverse;
-  position: relative;
-
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699), 0 6px 20px rgba(0, 0, 0, 0.19);
-}
-.brass {
-  display: flex;
-  flex-direction: row;
-  color: #fdd017;
-  font-size: 30px;
-  text-shadow: 2px 2px rgb(33, 45, 70);
-}
-
-.layer10 {
-  display: flex;
-  flex-direction: row;
-  width: 100px;
-  overflow: hidden;
-  justify-content: center;
-  box-shadow: 0 0 10px #656fbe, 0 0 20px #4ae8d8, 0 0 60px #97f1fd;
-}
-.image-10 {
-  display: flex;
-  flex-direction: row-reverse;
-  position: relative;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699), 0 6px 20px rgba(0, 0, 0, 0.19);
-}
-.silver {
-  display: flex;
-  flex-direction: row;
-  color: #fdd017;
-  font-size: 30px;
-  text-shadow: 2px 2px rgb(33, 45, 70);
+  .card_image {
+    grid-area: image;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699), 0 6px 20px rgba(0, 0, 0, 0.19);
+    height: 500px;
+    width: 500px;
+    margin: 0 50px 0 50px;
+  }
+  .dragon_name {
+    font-size: 75px;
+    margin-left: -50px;
+  }
+  .description {
+    margin-top: 0;
+    margin-right: 50px;
+  }
 }

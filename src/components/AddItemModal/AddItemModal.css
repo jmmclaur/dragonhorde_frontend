@@ -1,0 +1,10 @@
+.modal__label,
+.modal__legend,
+.modal__label_type_radio {
+  color: #000;
+}
+
+.modal__submit {
+  color: #fff;
+  background-color: #2542d2;
+}

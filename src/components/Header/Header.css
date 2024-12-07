@@ -45,7 +45,7 @@
   margin-left: 60px;
 }
 
-.header__registration {
+.header__reg {
   border-style: none;
   font-weight: 700;
   font-size: 30px;
@@ -54,18 +54,6 @@
   background-color: transparent;
   cursor: pointer;
   padding: 0 20px;
-}
-
-.header__login {
-  border-style: none;
-  font-weight: 700;
-  font-family: "CabinetGrotesk-Bold", sans-serif;
-  font-size: 30px;
-  line-height: 24px;
-  color: rgb(248, 207, 84);
-  background-color: transparent;
-  cursor: pointer;
-  padding: 0;
 }
 
 .header__dragon-btn {
@@ -125,4 +113,14 @@
   font-size: 20px;
   color: rgb(248, 207, 84);
   z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .header__logo {
+    margin-right: 165px;
+  }
+
+  .header__reg {
+    white-space: nowrap;
+  }
 }

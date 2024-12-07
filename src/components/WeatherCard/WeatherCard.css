@@ -22,3 +22,10 @@
   object-position: right top;
   width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+  .weather-card__temp {
+    display: flex;
+    left: 55px;
+  }
+}

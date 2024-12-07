@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   background-image: url("../../assets/mage.png");
+  background-size: cover;
 }
 
 .logo {
@@ -112,18 +113,29 @@
 .preheader {
   display: flex;
   justify-content: center;
-  font-size: 90px;
   color: #fff;
   margin-top: 50px;
-  margin-bottom: 100px;
   text-shadow: 20px 20px 50px rgb(225, 186, 60);
+  font-size: 25px;
 }
 
-.landscape {
-  display: flex;
-  width: 100%;
+.h1 {
+  font-size: 60px;
+  color: #fff;
 }
 
-.landscape-container {
-  width: 100px;
+input:focus {
+  background-color: #addded;
+}
+
+@media screen and (max-width: 768px) {
+  .preheader {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .preheader {
+    font-size: 20px;
+  }
 }

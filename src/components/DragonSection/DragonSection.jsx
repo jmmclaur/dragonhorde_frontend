@@ -18,7 +18,7 @@ function DragonSection({
   return (
     <div className="dragon-section">
       <div className="dragon-section__buttons">
-        <p>New Dragons</p>
+        <h1>New Dragons</h1>
         <button
           onClick={handleAddClick}
           type="button"
