@@ -123,4 +123,8 @@
   .header__reg {
     white-space: nowrap;
   }
+
+  .header__user-container {
+    margin-right: 20px;
+  }
 }

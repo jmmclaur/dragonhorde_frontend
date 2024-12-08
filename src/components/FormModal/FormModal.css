@@ -13,10 +13,12 @@
 
 .modal__opened {
   visibility: visible;
+  display: flex;
 }
 
 .modal_closed {
   visibility: hidden;
+  display: flex;
 }
 
 .modal__title {

@@ -16,14 +16,13 @@ function Main({
   return (
     <main>
       <WeatherCard weatherData={weatherData} />
+      <p className="cards__text">
+        {currentTemperatureUnit === "F"
+          ? `${weatherData.temp.F}°F Beware! Possible Dragon Sightings`
+          : `${weatherData.temp.C}°C Beware! Possible Dragon Sightings`}
+      </p>
       <section className="cards">
-        <p className="cards__text">
-          {currentTemperatureUnit === "F"
-            ? `${weatherData.temp.F}°F Beware! Possible Dragon Sightings`
-            : `${weatherData.temp.C}°C Beware! Possible Dragon Sightings`}
-        </p>
-
-        <ul className="cards__list">
+        <ul className="cards__list column">
           {updateDefaultDragonItems
             ?.filter((item) => {
               return item.weather === weatherData.type;

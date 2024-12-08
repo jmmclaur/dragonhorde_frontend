@@ -19,55 +19,57 @@ function Header({
   const currentUser = useContext(CurrentUserContext);
 
   return (
-    <header className="header">
-      <p className="header__date-and-location">
-        {" "}
-        {currentDate} , {weatherData.city}
-      </p>
-      <ToggleSwitch />
-      <a href="/about" className="nav1">
-        About
-      </a>
-      <Link to="/">
-        <img src={logo} alt="dragon horde logo" className="header__logo" />
-      </Link>
+    <header>
+      <nav className="header">
+        <p className="header__date-and-location">
+          {" "}
+          {currentDate} , {weatherData.city}
+        </p>
+        <ToggleSwitch />
+        <a href="/about" className="nav1">
+          About
+        </a>
+        <Link to="/">
+          <img src={logo} alt="dragon horde logo" className="header__logo" />
+        </Link>
 
-      {isLoggedIn ? (
-        <>
-          <button
-            onClick={handleAddClick}
-            type="button"
-            className="header__dragon-btn"
-          >
-            + Add Dragon
-          </button>
-          <Link className="header__link" to="/profile">
-            <div className="header__user-container">
-              <p className="header__username">{currentUser?.name}</p>
-              {currentUser?.avatar ? (
-                <img
-                  src={currentUser?.avatar}
-                  alt="Terrence Tegegne"
-                  className="header__avatar"
-                />
-              ) : (
-                <div className="header__avatar-placeholder">
-                  {currentUser?.name?.charAt(0).toUpperCase() || ""}
-                </div>
-              )}
-            </div>
-          </Link>
-        </>
-      ) : (
-        <div className="header__auth">
-          <button className="header__reg" onClick={handleRegisterClick}>
-            Sign Up /
-          </button>
-          <button className="header__reg" onClick={handleLoginClick}>
-            Login
-          </button>
-        </div>
-      )}
+        {isLoggedIn ? (
+          <>
+            <button
+              onClick={handleAddClick}
+              type="button"
+              className="header__dragon-btn"
+            >
+              + Add Dragon
+            </button>
+            <Link className="header__link" to="/profile">
+              <div className="header__user-container">
+                <p className="header__username">{currentUser?.name}</p>
+                {currentUser?.avatar ? (
+                  <img
+                    src={currentUser?.avatar}
+                    alt="Terrence Tegegne"
+                    className="header__avatar"
+                  />
+                ) : (
+                  <div className="header__avatar-placeholder">
+                    {currentUser?.name?.charAt(0).toUpperCase() || ""}
+                  </div>
+                )}
+              </div>
+            </Link>
+          </>
+        ) : (
+          <div className="header__auth">
+            <button className="header__reg" onClick={handleRegisterClick}>
+              Sign Up /
+            </button>
+            <button className="header__reg" onClick={handleLoginClick}>
+              Login
+            </button>
+          </div>
+        )}
+      </nav>
     </header>
   );
 }
