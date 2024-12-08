@@ -15,10 +15,17 @@
   margin: 0;
   position: absolute;
   top: 78px;
-  left: 78px;
+  left: 76px;
 }
 
 .weather-card__image {
   object-position: right top;
   width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .weather-card__temp {
+    display: flex;
+    left: 55px;
+  }
 }

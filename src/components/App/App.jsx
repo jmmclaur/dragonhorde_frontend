@@ -1,27 +1,27 @@
 import { useEffect, useState } from "react";
-import "./components/App/App.css";
-import Header from "./components/Header/Header";
-import Landscape from "./components/Parallax/Parallax";
-import Footer from "./components/Footer/Footer";
-import Profile from "./components/Profile/Profile";
-import About from "./components/About/About";
-import DragonSection from "./components/DragonSection/DragonSection";
-import RegisterModal from "./components/RegisterModal/RegisterModal";
-import LoginModal from "./components/LoginModal/LoginModal";
-import AddItemModal from "./components/AddItemModal/AddItemModal";
-import ItemModal from "./components/ItemModal/ItemModal";
-import ProfileEditModal from "./components/ProfileEditModal/ProfileEditModal";
-import Main from "./components/Main/Main";
-import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
-import { getItems, addNewItem, deleteItemById } from "./utils/api";
-import { CurrentUserContext } from "./utils/contexts/CurrentUserContext";
-import { setToken, getToken, removeToken } from "./utils/token";
+import "../App/App.css";
+import Header from "../Header/Header";
+import Landscape from "../Parallax/Parallax";
+import Footer from "../Footer/Footer";
+import Profile from "../Profile/Profile";
+import About from "../About/About";
+import DragonSection from "../DragonSection/DragonSection";
+import RegisterModal from "../RegisterModal/RegisterModal";
+import LoginModal from "../LoginModal/LoginModal";
+import AddItemModal from "../AddItemModal/AddItemModal";
+import ItemModal from "../ItemModal/ItemModal";
+import ProfileEditModal from "../ProfileEditModal/ProfileEditModal";
+import Main from "../Main/Main";
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
+import { getItems, addNewItem, deleteItemById } from "../../utils/api";
+import { CurrentUserContext } from "../../utils/contexts/CurrentUserContext";
+import { setToken, getToken, removeToken } from "../../utils/token";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import { getWeather, filterWeatherData } from "./utils/weatherApi";
-import { CurrentTemperatureUnitContext } from "./utils/contexts/CurrentTemperatureUnitContext";
-import { coordinates, apiKey } from "./utils/constants";
-import * as api from "./utils/api";
-import * as auth from "./utils/auth/auth";
+import { getWeather, filterWeatherData } from "../../utils/weatherApi";
+import { CurrentTemperatureUnitContext } from "../../utils/contexts/CurrentTemperatureUnitContext";
+import { coordinates, apiKey } from "../../utils/constants";
+import * as api from "../../utils/api";
+import * as auth from "../../utils/auth/auth";
 import React from "react";
 
 //structure
@@ -90,11 +90,6 @@ function App() {
       ? setCurrentTemperatureUnit("C")
       : setCurrentTemperatureUnit("F");
   };
-
-  /*
-  const handleScroll = () => {
-    setActiveModal("scroll");
-  }; */
 
   //useEffect
   useEffect(() => {
@@ -202,42 +197,12 @@ function App() {
     return addNewItem(name, imageUrl, weather, species, jwt)
       .then((item) => {
         setDragonItems([item.data, ...defaultDragonItems]);
-        /*{Array.isArray(defaultDragonItems) && defaultDragonItems.map((item) => (
-          // Render item components here
-
-        ))}; */
-        console.log("hi");
         closeActiveModal();
       })
       .catch((err) => {
         console.error(err);
       });
   };
-
-  /*
-  const addNewItem = {
-    name: "Blah",
-    dragon: {
-      name: "",
-      imageUrl: "",
-      weather: "",
-      species: "",
-    },
-  };
-
-  const dragonName = addNewItem.dragon?.name; */
-  /*
-  const adventurer = {
-    name: "Alice",
-    cat: {
-      name: "Dinah",
-    },
-  };
-
-  const dogName = adventurer.dog?.name;
-  console.log(dogName);
-  console.log(adventurer.someNonExistentMethod?.());
-  */
 
   //new fixing add item button
   const handleDelete = async (id) => {
@@ -284,16 +249,13 @@ function App() {
           });
   };
 
-  /////
-  /*  <div className="parallax">
-        <Landscape />
-      </div> */
   //skeleton structure
   return (
     <div className="background">
       <div className="preheader">
-        <p>Welcome to the Dragon Horde</p>
+        <h1>Welcome to the Dragon Horde</h1>
       </div>
+
       <div className="body">
         <CurrentUserContext.Provider value={currentUser}>
           <div className="page">
@@ -345,10 +307,8 @@ function App() {
                       </ProtectedRoute>
                     }
                   />
+                  <Route path="/about" element={<About about={About} />} />
                 </Routes>
-                <div className="about">
-                  <About />
-                </div>
               </div>
 
               <div className="landscape">
@@ -389,9 +349,9 @@ function App() {
             </CurrentTemperatureUnitContext.Provider>
           </div>
         </CurrentUserContext.Provider>
-      </div>
-      <div className="page__content">
-        <Footer />
+        <div className="page__content">
+          <Footer />
+        </div>
       </div>
     </div>
   );

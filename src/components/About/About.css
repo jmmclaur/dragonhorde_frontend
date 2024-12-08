@@ -8,13 +8,20 @@
   display: flex;
   align-items: center;
   font-family: "CabinetGrotesk-Bold", sans-serif;
-  font-size: 60px;
-  color: #fff;
+  font-size: 40px;
+  color: #2542d2;
+}
+
+.dragon1 {
+  display: flex;
+  width: 800px;
+  height: 500px;
 }
 
 .about__cards {
   display: flex;
   flex-direction: row;
+  color: #fff;
 }
 
 .map {

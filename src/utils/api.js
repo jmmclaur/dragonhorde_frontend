@@ -1,4 +1,8 @@
-const baseUrl = "http://localhost:3001";
+//const baseUrl = "http://localhost:3001";
+const baseUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://api.dragonhorde.jmmclaur.jumpingcrab.com"
+    : "http://localhost:3001";
 
 function checkResponse(res) {
   if (res.ok) {
@@ -32,7 +36,41 @@ const updateUserInfo = async (name, avatar, token) => {
   return checkResponse(res);
 };
 
+/// Simulate Login ///
+/*
+function getItems() {
+  return new Promise((resolve, reject) =>
+    resolve([
+      {
+        id: "6751dce37212176e62a1bf13", // generated this at random from a mongodb id generator website: https://observablehq.com/@hugodf/mongodb-objectid-generator
+        title: "Some news article",
+        url: "put some actual article URL here",
+        // ...etc, whatever properties it's supposed to have
+      },
+
+      // and have however many you want to show on the saved-news page
+    ])
+  );
+}
+
+function addNewItem(name, imageUrl, weather, species, token) {
+  // adding a new dragon
+  return new Promise((resolve, reject) => {
+    resolve({
+      id: "65f7371e7bce9e7d331b11a0", // another one made up from the generator
+      url: article,
+      url, // Use whatever properties the newsAPI gives you, I just made these up
+      title: article.title,
+      imageUrl: article.imagUrl,
+      // whatever other properties from the newsAPI-given article object you saved to the database
+    });
+  });
+} */
+
+/// Server ///
+
 async function addNewItem(name, imageUrl, weather, species, token) {
+  console.log("weather: " + weather);
   return fetch(`${baseUrl}/items`, {
     method: "POST",
     headers: {

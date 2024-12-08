@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   background-image: url("../../assets/mage.png");
+  background-size: cover;
 }
 
 .logo {
@@ -45,44 +46,56 @@
   margin: 10px;
 }
 
-.about {
-  margin: 100px;
-}
-
 .about__dragon {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.about {
+  background-image: url("../../assets/dragon_scales.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 0 100px 0;
+}
 .about__title {
   display: flex;
   justify-content: center;
   font-family: "CabinetGrotesk-Bold", sans-serif;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 900;
-  margin-bottom: 0;
+  margin-bottom: 80px;
+  padding-top: 10px;
+  padding-bottom: 20px;
   color: #fff;
+  background-color: rgb(208, 165, 35);
+  text-shadow: 20px 20px 50px rgb(97, 77, 19);
 }
 .about__subtitle {
   display: flex;
   justify-content: center;
   font-family: "CabinetGrotesk-Bold", sans-serif;
   font-size: 30px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #fff;
+  font-weight: 900;
+  margin-bottom: 50px;
+  color: rgb(97, 77, 19);
+  background-color: rgb(248, 207, 84);
+}
+.dragon1 {
+  display: flex;
+  width: 800px;
+  height: 500px;
 }
 .card__text {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 50px;
   padding-left: 20px;
   padding-right: 20px;
   font-style: normal;
-  color: rgb(255, 255, 255);
-  background-image: url("../../assets/topography.png");
+  color: #000;
+  background-color: rgb(208, 165, 35);
 }
 
 .sidebar__info {
@@ -100,18 +113,36 @@
 .preheader {
   display: flex;
   justify-content: center;
-  font-size: 100px;
   color: #fff;
   margin-top: 50px;
-  margin-bottom: 380px;
-  text-shadow: 20px 20px 50px rgba(9, 5, 54, 0.541);
+  text-shadow: 20px 20px 50px rgb(225, 186, 60);
+  font-size: 25px;
 }
 
-.landscape {
-  display: flex;
-  width: 100%;
+.h1 {
+  font-size: 60px;
+  color: #fff;
 }
 
-.landscape-container {
-  width: 100px;
+input:focus {
+  background-color: #addded;
+}
+
+@media screen and (max-width: 1131px) {
+  .cards__list {
+    display: flex;
+    padding-left: 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .preheader {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .preheader {
+    font-size: 20px;
+  }
 }

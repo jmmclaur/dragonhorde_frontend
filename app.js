@@ -1,7 +1,13 @@
-const path = require("path");
+/*const path = require("path");
 const express = require("express");
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
+const bodyParser = require("body-parser"); */
+
+import path from "path";
+import express from "express";
+import mongoose from "mongoose";
+import bodyParser from "body-parser";
+import dragonItemsRouter from "./routes/dragonItems.js";
 
 const { PORT = 3001, BASE_PATH } = process.env;
 const app = express();
@@ -15,8 +21,7 @@ mongoose.connect("mongodb://localhost:27017/mynewdb", {
   useFindAndModify: false,
 });
 
-app.use("/dragonItem", require("./routes/dragonItems"));
-//originally had it as item and items
+app.use("/dragonItem", dragonItemsRouter);
 
 app.use(express.static(path.join(__dirname, "public")));
 app.listen(PORT, () => {

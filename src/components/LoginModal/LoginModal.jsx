@@ -1,16 +1,3 @@
-// import react, use state, form modal
-
-// constants //
-
-// modal with form
-
-// export default LoginModal;
-
-/*
-const LoginModal = ({ handleRegisterClick }) => {
-  return <FormModal onLinkClick={handleRegisterClick} />;
-}; */
-
 import React, { useState } from "react";
 import FormModal from "../FormModal/FormModal";
 

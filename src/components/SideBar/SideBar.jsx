@@ -13,7 +13,7 @@ function SideBar({ handleEditClick, handleLogOut }) {
           src={currentUser?.avatar}
           alt={currentUser?.name}
         />
-        <p className="sidebar__username">{currentUser.name}</p>
+        <h2 className="sidebar__username">{currentUser.name}</h2>
       </div>
       <button className="sidebar__edit" onClick={handleEditClick}>
         Profile Settings

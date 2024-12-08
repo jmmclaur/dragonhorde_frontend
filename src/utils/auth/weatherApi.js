@@ -31,6 +31,6 @@ export const getWeatherType = (temperature) => {
   } else if (temperature >= 66 && temperature < 85) {
     return "warm";
   } else {
-    return "Cold";
+    return "cold";
   }
 };

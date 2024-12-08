@@ -13,20 +13,23 @@
 
 .modal__opened {
   visibility: visible;
+  display: flex;
 }
 
 .modal_closed {
   visibility: hidden;
+  display: flex;
 }
 
 .modal__title {
   font-family: "CabinetGrotesk-Bold", sans-serif;
   margin: 0, 0, 24px, 0;
   font-size: 16px;
+  color: #000;
 }
 
 .modal__container {
-  background-color: white;
+  background-color: #fff;
   position: relative;
   border-radius: 20px;
   max-width: 496px;
@@ -41,11 +44,13 @@
   margin-bottom: 8px;
   font-weight: bold;
   line-height: 20px;
+  color: #000;
 }
 
 .modal__label_type_radio {
   font-weight: normal;
   font-family: "CabinetGrotesk-Bold", sans-serif;
+  color: #000;
 }
 
 .modal__legend {
@@ -53,14 +58,17 @@
   margin-bottom: 12px;
   line-height: 20px;
   font-weight: bold;
+  color: #000;
 }
 
 .modal__input {
   outline: 0;
   margin-bottom: 24px;
   border-width: 0 0 2px;
-  border-color: black;
+  border-color: #000;
   width: 100%;
+  color: #000;
+  background-color: #fff;
 }
 
 .modal__input:focus {
@@ -94,7 +102,7 @@
   font-weight: 700;
   width: 150px;
   height: 36px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #2542d2;
   border: none;
 }
 

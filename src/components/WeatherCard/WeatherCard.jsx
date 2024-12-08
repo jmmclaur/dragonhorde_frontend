@@ -1,10 +1,3 @@
-/*if new doesn't work, use this
-function WeatherCard({}) {
-  return <div>WeatherCard</div>;
-}
-
-export default WeatherCard; */
-
 import "./WeatherCard.css";
 import { weatherOptions, defaultWeatherOptions } from "../../utils/constants";
 import { useContext } from "react";
@@ -32,6 +25,7 @@ function WeatherCard({ weatherData }) {
           ? `${weatherData.temp.F}°F`
           : `${weatherData.temp.C}°C`}
       </p>
+
       <img
         src={link}
         alt={weatherOption?.condition || "default"}

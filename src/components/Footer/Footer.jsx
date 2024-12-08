@@ -1,6 +1,5 @@
 import "./Footer.css";
 import "./Footer.css";
-import sleepingDragon from "../../assets/sleeping_dragon.png";
 
 function Footer() {
   return (

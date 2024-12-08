@@ -1,13 +1,3 @@
-// import formmodal, use context/effect, current user context
-
-// functions
-
-// constants
-
-// formmodal itself
-
-// export default UpdatedUserModal;
-
 import FormModal from "./FormModal";
 import { useContext, useEffect } from "react";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";

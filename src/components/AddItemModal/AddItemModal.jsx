@@ -1,16 +1,3 @@
-// import react and use state
-// import formmodal
-
-// Constants //
-
-// Url Change
-// API change
-// onSubmit
-// Reset Form
-
-// the form itself
-// name, species, weather, image, radio buttons for diet (fish, cattle, vegetables, gold, etc)
-
 import React, { useState } from "react";
 import FormModal from "../FormModal/FormModal";
 

@@ -1,13 +1,3 @@
-// import react, use state/effect/context, form modal, current user context
-
-// constants //
-
-// use effect
-
-// form itself
-
-// export default ProfileEditModal;
-
 import React, { useState, useEffect, useContext } from "react";
 import FormModal from "../FormModal/FormModal";
 import { CurrentUserContext } from "../../utils/contexts/CurrentUserContext";

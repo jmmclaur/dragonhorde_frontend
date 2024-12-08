@@ -1,11 +1,3 @@
-// import react, usestate, formmodal
-
-// constants //
-
-// formmodal itself
-
-// export default RegisterModal;
-
 import React, { useState } from "react";
 import FormModal from "../FormModal/FormModal";
 
